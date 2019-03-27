@@ -1,3 +1,0 @@
-[submodule "protocol-validation"]
-	path = protocol-validation
-	url = https://github.com/codaco/protocol-validation.git
