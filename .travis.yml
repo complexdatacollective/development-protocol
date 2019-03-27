@@ -1,9 +1,19 @@
+node_js:
+  - "8.11"
+language: node_js
 install: true
-script: zip development-protocol.netcanvas * -r
+script:
+- zip development-protocol.netcanvas * -r
+- git submodule update --init --recursive
+jobs:
+  include:
+    - stage: validate
+      script:
+        - cd protocol-validation && npm install 
+        - npm run validate-protocol ../development-protocol.netcanvas
 before_deploy:
 - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
 - git tag $TRAVIS_TAG
-
 deploy:
   provider: releases
   api_key:
