@@ -13,11 +13,11 @@ jobs:
       before_deploy:
         - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
         - git tag $TRAVIS_TAG
-        deploy:
-          provider: releases
-          api_key:
-            secure: PZSSoBzTU1AI8rc4txswmlrOsf7+mCvseRWesoWkoW7Iwz9Vzwr6d2Y7sTv1SjEbF2gUgTrxWdsF9SkUXvFvzyAUSohwoP+OWCgvaDiklOtFie9Y1evq/89mJZW2nsuvKhX8gNP3Jy696PUmggFnYBNTeMFQyqgObEHtBN3T9oNDYFta6BSiqBQijj/8ydDSQBiGZ7xjGFDbJdmAnoBtLVJKH+uVABFIWKxshjLuUkAVZNqGFzEJgbKgTap2ZItsHjlbOSLrZOMm5ZEk0gcbIVw1lDQQfoAFVkRf0kUKLYJvIWZ8dtzmwt+8V2/BxrhQozsxMYFoCYl9tjQx0GcYP72heyTE/LSvzMdNbpl2RMqeBaSklGpyqZkpXg2uOB7poFIpDTvN5zneEEP1CzynMU/hCkBKxcaesCnQBHx33ejbjNMRT9Kl1Y6vJ+4Atr2vbdIF51rseABw4upQJpHX67W15PMbRS0/nwOqOXk311WGHctmcBOByCYZTQCNHbVB0YHGWcx4R0p6lYA94/7LA6pukZKhGYnyW9CX4b0ms8G8tnnM37tu6xtKldcBe897Sg/Kz/1GiI8f1beX8KkXYfj/fYNAgs4zCl9+3Z2E/PDG22Z4YSRPPkpf0vq1zhdM1M7f5CBd0pUCaMMalQ6rio0hAqmD4jYAMVpjDVjyRA0=
-          file: development-protocol.netcanvas
-          skip_cleanup: true
-          on:
-            repo: codaco/development-protocol
+      deploy:
+        provider: releases
+        api_key:
+          secure: PZSSoBzTU1AI8rc4txswmlrOsf7+mCvseRWesoWkoW7Iwz9Vzwr6d2Y7sTv1SjEbF2gUgTrxWdsF9SkUXvFvzyAUSohwoP+OWCgvaDiklOtFie9Y1evq/89mJZW2nsuvKhX8gNP3Jy696PUmggFnYBNTeMFQyqgObEHtBN3T9oNDYFta6BSiqBQijj/8ydDSQBiGZ7xjGFDbJdmAnoBtLVJKH+uVABFIWKxshjLuUkAVZNqGFzEJgbKgTap2ZItsHjlbOSLrZOMm5ZEk0gcbIVw1lDQQfoAFVkRf0kUKLYJvIWZ8dtzmwt+8V2/BxrhQozsxMYFoCYl9tjQx0GcYP72heyTE/LSvzMdNbpl2RMqeBaSklGpyqZkpXg2uOB7poFIpDTvN5zneEEP1CzynMU/hCkBKxcaesCnQBHx33ejbjNMRT9Kl1Y6vJ+4Atr2vbdIF51rseABw4upQJpHX67W15PMbRS0/nwOqOXk311WGHctmcBOByCYZTQCNHbVB0YHGWcx4R0p6lYA94/7LA6pukZKhGYnyW9CX4b0ms8G8tnnM37tu6xtKldcBe897Sg/Kz/1GiI8f1beX8KkXYfj/fYNAgs4zCl9+3Z2E/PDG22Z4YSRPPkpf0vq1zhdM1M7f5CBd0pUCaMMalQ6rio0hAqmD4jYAMVpjDVjyRA0=
+        file: development-protocol.netcanvas
+        skip_cleanup: true
+        on:
+          repo: codaco/development-protocol
