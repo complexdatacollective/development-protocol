@@ -6,7 +6,7 @@ jobs:
   include:
     - stage: validate
       script:
-        - zip -0 development-protocol.netcanvas * -r
+        - zip development-protocol.netcanvas * -r -0
         - git clone https://github.com/codaco/protocol-validation.git
         - cd protocol-validation && npm install 
         - npm run validate-protocol ../development-protocol.netcanvas

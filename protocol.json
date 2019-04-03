@@ -45,31 +45,169 @@
           },
           "1096204b-48fe-444c-b642-4ab211f7f57c": {
             "name": "contactFreq",
-            "type": "ordinal"
+            "type": "ordinal",
+            "options": [
+              {
+                "label": "Last 24 hours",
+                "value": 4
+              },
+              {
+                "label": "Last week",
+                "value": 3
+              },
+              {
+                "label": "Last six months",
+                "value": 2
+              },
+              {
+                "label": "Last two years",
+                "value": 1
+              },
+              {
+                "label": "Over two years ago",
+                "value": -1
+              }
+            ]
           },
           "23c5a7b9-b553-4ff1-b515-6a81999773d2": {
             "name": "discussFreq",
-            "type": "ordinal"
+            "type": "ordinal",
+            "options": [
+              {
+                "label": "Three",
+                "value": 3
+              },
+              {
+                "label": "Two",
+                "value": 2
+              },
+              {
+                "label": "One",
+                "value": 1
+              },
+              {
+                "label": "Missing Value",
+                "value": -1
+              }
+            ]
           },
           "e343a91f-628d-4175-870c-957beffa0152": {
             "name": "catvar2",
-            "type": "categorical"
+            "type": "categorical",
+            "options": [
+              {
+                "label": "One",
+                "value": "one"
+              },
+              {
+                "label": "Two",
+                "value": "two"
+              }
+            ]
           },
           "e343a91f-628d-4175-870c-957beffa0153": {
             "name": "catvar3",
-            "type": "categorical"
+            "type": "categorical",
+            "options": [
+              {
+                "label": "One",
+                "value": "one"
+              },
+              {
+                "label": "Two",
+                "value": "two"
+              },
+              {
+                "label": "Three",
+                "value": "three"
+              }
+            ]
           },
           "e343a91f-628d-4175-870c-957beffa0154": {
             "name": "catvar4",
-            "type": "categorical"
+            "type": "categorical",
+            "options": [
+              {
+                "label": "One",
+                "value": "one"
+              },
+              {
+                "label": "Two",
+                "value": "two"
+              },
+              {
+                "label": "Three",
+                "value": "three"
+              },
+              {
+                "label": "Four",
+                "value": "four"
+              }
+            ]
           },
           "e343a91f-628d-4175-870c-957beffa0151": {
             "name": "contactType",
-            "type": "categorical"
+            "type": "categorical",
+            "options": [
+              {
+                "label": "In person",
+                "value": "person"
+              },
+              {
+                "label": "Phone call",
+                "value": "call"
+              },
+              {
+                "label": "Text",
+                "value": "text"
+              },
+              {
+                "label": "Email",
+                "value": "email"
+              },
+              {
+                "label": "Social media",
+                "value": "media"
+              }
+            ]
           },
           "4ccba4e2-a246-46ee-a3ff-1c70fb4c449c": {
             "name": "discussType",
-            "type": "categorical"
+            "type": "categorical",
+            "options": [
+              {
+                "label": "Politics",
+                "value": "politics"
+              },
+              {
+                "label": "Weather",
+                "value": "weather"
+              },
+              {
+                "label": "Work",
+                "value": "work"
+              },
+              {
+                "label": "Current events",
+                "value": "current"
+              },
+              {
+                "label": "Entertainment",
+                "value": "entertainment"
+              },
+              {
+                "label": "School",
+                "value": "school"
+              },
+              {
+                "label": "Friends",
+                "value": "friends"
+              },
+              {
+                "label": "Money",
+                "value": "money"
+              }
+            ]
           },
           "d13ca72d-aefe-4f48-841d-09f020e0e988": {
             "name": "closenessLayout",
@@ -91,7 +229,29 @@
           },
           "b6f2c4b9-e42f-459b-8f59-a11a685f460d": {
             "name": "special_category",
-            "type": "ordinal"
+            "type": "ordinal",
+            "options": [
+              {
+                "label": "Four",
+                "value": 4
+              },
+              {
+                "label": "Three",
+                "value": 3
+              },
+              {
+                "label": "Two",
+                "value": 2
+              },
+              {
+                "label": "One",
+                "value": 1
+              },
+              {
+                "label": "Minus One",
+                "value": -1
+              }
+            ]
           },
           "04298634-eb5f-450a-84dd-95d2708e10c1": {
             "name": "dataSource",
@@ -127,15 +287,101 @@
           },
           "583ad529-66c6-4c84-8e31-a31452d6b5e9": {
             "name": "ordinalVariable",
-            "type": "ordinal"
+            "type": "ordinal",
+            "options": [
+              {
+                "label": "Value Four",
+                "value": 4
+              },
+              {
+                "label": "Value Three is quite long",
+                "value": 3
+              },
+              {
+                "label": "Value Two",
+                "value": 2
+              },
+              {
+                "label": "Value One is also long, with break",
+                "value": 1
+              },
+              {
+                "label": "Missing Value",
+                "value": -1
+              }
+            ]
           },
           "e3537457-41a2-4fbf-a1f8-9235b3c1edc6": {
             "name": "categoricalVariable",
-            "type": "categorical"
+            "type": "categorical",
+            "options": [
+              {
+                "label": "Value A has additional text to go along with it",
+                "value": "Value A"
+              },
+              {
+                "label": "Value B",
+                "value": "Value B"
+              },
+              {
+                "label": "Value C is a label that has too much text - shorten it",
+                "value": "Value C"
+              },
+              {
+                "label": "Value D",
+                "value": "Value D"
+              },
+              {
+                "label": "Value E",
+                "value": "Value E"
+              }
+            ]
           },
           "6c647977-f2d1-426f-b0c5-6d44c795c554": {
             "name": "categoricalVariable2",
-            "type": "categorical"
+            "type": "categorical",
+            "options": [
+              {
+                "label": "Friends",
+                "value": "Value A"
+              },
+              {
+                "label": "Family",
+                "value": "Value B"
+              },
+              {
+                "label": "Work",
+                "value": "Value C"
+              },
+              {
+                "label": "Church",
+                "value": "Value D"
+              },
+              {
+                "label": "Vikings",
+                "value": "Value E"
+              },
+              {
+                "label": "German Course",
+                "value": "Value F"
+              },
+              {
+                "label": "Gardening Club",
+                "value": "Value G"
+              },
+              {
+                "label": "Neighbors",
+                "value": "Value H"
+              },
+              {
+                "label": "Oxford Friends",
+                "value": "Value I"
+              },
+              {
+                "label": "Band",
+                "value": "Value J"
+              }
+            ]
           }
         }
       },
@@ -156,7 +402,29 @@
           },
           "a39a86ef-18c7-4545-8fbc-d0e5894565d0": {
             "name": "visitfreq",
-            "type": "ordinal"
+            "type": "ordinal",
+            "options": [
+              {
+                "label": "Every day",
+                "value": 4
+              },
+              {
+                "label": "Every other day",
+                "value": 3
+              },
+              {
+                "label": "Every week",
+                "value": 2
+              },
+              {
+                "label": "Sometimes",
+                "value": 1
+              },
+              {
+                "label": "Never",
+                "value": -1
+              }
+            ]
           },
           "55f1fbbe-2fe5-42a7-88fb-9a8e5e659d2f": {
             "name": "primary_venue",
@@ -221,15 +489,101 @@
         },
         "683ad529-66c6-4c84-8e31-a31452d6b5e9": {
           "name": "ordinalVariable",
-          "type": "ordinal"
+          "type": "ordinal",
+          "options": [
+            {
+              "label": "Value Four",
+              "value": 4
+            },
+            {
+              "label": "Value Three is quite long",
+              "value": 3
+            },
+            {
+              "label": "Value Two",
+              "value": 2
+            },
+            {
+              "label": "Value One is also long, with break",
+              "value": 1
+            },
+            {
+              "label": "Missing Value",
+              "value": -1
+            }
+          ]
         },
         "f3537457-41a2-4fbf-a1f8-9235b3c1edc6": {
           "name": "categoricalVariable",
-          "type": "categorical"
+          "type": "categorical",
+          "options": [
+            {
+              "label": "Value A has additional text to go along with it",
+              "value": "Value A"
+            },
+            {
+              "label": "Value B",
+              "value": "Value B"
+            },
+            {
+              "label": "Value C is a label that has too much text - shorten it",
+              "value": "Value C"
+            },
+            {
+              "label": "Value D",
+              "value": "Value D"
+            },
+            {
+              "label": "Value E",
+              "value": "Value E"
+            }
+          ]
         },
         "7c647977-f2d1-426f-b0c5-6d44c795c554": {
           "name": "categoricalVariable2",
-          "type": "categorical"
+          "type": "categorical",
+          "options": [
+            {
+              "label": "Friends",
+              "value": "Value A"
+            },
+            {
+              "label": "Family",
+              "value": "Value B"
+            },
+            {
+              "label": "Work",
+              "value": "Value C"
+            },
+            {
+              "label": "Church",
+              "value": "Value D"
+            },
+            {
+              "label": "Vikings",
+              "value": "Value E"
+            },
+            {
+              "label": "German Course",
+              "value": "Value F"
+            },
+            {
+              "label": "Gardening Club",
+              "value": "Value G"
+            },
+            {
+              "label": "Neighbors",
+              "value": "Value H"
+            },
+            {
+              "label": "Oxford Friends",
+              "value": "Value I"
+            },
+            {
+              "label": "Band",
+              "value": "Value J"
+            }
+          ]
         }
       }
     },
@@ -240,15 +594,57 @@
         "variables": {
           "e343a91f-628d-4175-870c-957beffa0002": {
             "name": "catvar2",
-            "type": "categorical"
+            "type": "categorical",
+            "options": [
+              {
+                "label": "One",
+                "value": "one"
+              },
+              {
+                "label": "Two",
+                "value": "two"
+              }
+            ]
           },
           "e343a91f-628d-4175-870c-957beffa0003": {
             "name": "catvar3",
-            "type": "categorical"
+            "type": "categorical",
+            "options": [
+              {
+                "label": "One",
+                "value": "one"
+              },
+              {
+                "label": "Two",
+                "value": "two"
+              },
+              {
+                "label": "Three",
+                "value": "three"
+              }
+            ]
           },
           "e343a91f-628d-4175-870c-957beffa0004": {
             "name": "catvar4",
-            "type": "categorical"
+            "type": "categorical",
+            "options": [
+              {
+                "label": "One",
+                "value": "one"
+              },
+              {
+                "label": "Two",
+                "value": "two"
+              },
+              {
+                "label": "Three",
+                "value": "three"
+              },
+              {
+                "label": "Four",
+                "value": "four"
+              }
+            ]
           }
         }
       },
@@ -259,7 +655,17 @@
         "variables": {
           "d343a91f-628d-4175-870c-957beffa0002": {
             "name": "catvar2",
-            "type": "categorical"
+            "type": "categorical",
+            "options": [
+              {
+                "label": "One",
+                "value": "one"
+              },
+              {
+                "label": "Two",
+                "value": "two"
+              }
+            ]
           }
         }
       }
@@ -300,28 +706,6 @@
             "variable": "683ad529-66c6-4c84-8e31-a31452d6b5e9",
             "component": "RadioGroup",
             "prompt": "How much do you like likert scales?",
-            "options": [
-              {
-                "label": "Value Four",
-                "value": 4
-              },
-              {
-                "label": "Value Three is quite long",
-                "value": 3
-              },
-              {
-                "label": "Value Two",
-                "value": 2
-              },
-              {
-                "label": "Value One is also long, with break",
-                "value": 1
-              },
-              {
-                "label": "Missing Value",
-                "value": -1
-              }
-            ],
             "validation": {
               "required": true
             }
@@ -330,28 +714,6 @@
             "variable": "f3537457-41a2-4fbf-a1f8-9235b3c1edc6",
             "component": "CheckboxGroup",
             "prompt": "Which of these things do you like?",
-            "options": [
-              {
-                "label": "Value A has additional text to go along with it",
-                "value": "Value A"
-              },
-              {
-                "label": "Value B",
-                "value": "Value B"
-              },
-              {
-                "label": "Value C is a label that has too much text - shorten it",
-                "value": "Value C"
-              },
-              {
-                "label": "Value D",
-                "value": "Value D"
-              },
-              {
-                "label": "Value E",
-                "value": "Value E"
-              }
-            ],
             "validation": {
               "minSelected": 1
             }
@@ -360,48 +722,6 @@
             "variable": "7c647977-f2d1-426f-b0c5-6d44c795c554",
             "component": "ToggleButtonGroup",
             "prompt": "Which of these other things do you like?",
-            "options": [
-              {
-                "label": "Friends",
-                "value": "Value A"
-              },
-              {
-                "label": "Family",
-                "value": "Value B"
-              },
-              {
-                "label": "Work",
-                "value": "Value C"
-              },
-              {
-                "label": "Church",
-                "value": "Value D"
-              },
-              {
-                "label": "Vikings",
-                "value": "Value E"
-              },
-              {
-                "label": "German Course",
-                "value": "Value F"
-              },
-              {
-                "label": "Gardening Club",
-                "value": "Value G"
-              },
-              {
-                "label": "Neighbors",
-                "value": "Value H"
-              },
-              {
-                "label": "Oxford Friends",
-                "value": "Value I"
-              },
-              {
-                "label": "Band",
-                "value": "Value J"
-              }
-            ],
             "validation": {
               "minSelected": 1,
               "maxSelected": 4
@@ -448,24 +768,6 @@
             "variable": "e343a91f-628d-4175-870c-957beffa0154",
             "component": "ToggleButtonGroup",
             "prompt": "Multiple categorical membership variable",
-            "options": [
-              {
-                "label": "One",
-                "value": "one"
-              },
-              {
-                "label": "Two",
-                "value": "two"
-              },
-              {
-                "label": "Three",
-                "value": "three"
-              },
-              {
-                "label": "Four",
-                "value": "four"
-              }
-            ],
             "validation": {
               "maxSelected": 2
             }
@@ -703,28 +1005,6 @@
             "variable": "583ad529-66c6-4c84-8e31-a31452d6b5e9",
             "component": "RadioGroup",
             "prompt": "How much do you like likert scales?",
-            "options": [
-              {
-                "label": "Value Four",
-                "value": 4
-              },
-              {
-                "label": "Value Three is quite long",
-                "value": 3
-              },
-              {
-                "label": "Value Two",
-                "value": 2
-              },
-              {
-                "label": "Value One is also long, with break",
-                "value": 1
-              },
-              {
-                "label": "Missing Value",
-                "value": -1
-              }
-            ],
             "validation": {
               "required": true
             }
@@ -733,28 +1013,6 @@
             "variable": "e3537457-41a2-4fbf-a1f8-9235b3c1edc6",
             "component": "CheckboxGroup",
             "prompt": "Which of these things do you like?",
-            "options": [
-              {
-                "label": "Value A has additional text to go along with it",
-                "value": "Value A"
-              },
-              {
-                "label": "Value B",
-                "value": "Value B"
-              },
-              {
-                "label": "Value C is a label that has too much text - shorten it",
-                "value": "Value C"
-              },
-              {
-                "label": "Value D",
-                "value": "Value D"
-              },
-              {
-                "label": "Value E",
-                "value": "Value E"
-              }
-            ],
             "validation": {
               "minSelected": 1
             }
@@ -763,48 +1021,6 @@
             "variable": "6c647977-f2d1-426f-b0c5-6d44c795c554",
             "component": "ToggleButtonGroup",
             "prompt": "Which of these other things do you like?",
-            "options": [
-              {
-                "label": "Friends",
-                "value": "Value A"
-              },
-              {
-                "label": "Family",
-                "value": "Value B"
-              },
-              {
-                "label": "Work",
-                "value": "Value C"
-              },
-              {
-                "label": "Church",
-                "value": "Value D"
-              },
-              {
-                "label": "Vikings",
-                "value": "Value E"
-              },
-              {
-                "label": "German Course",
-                "value": "Value F"
-              },
-              {
-                "label": "Gardening Club",
-                "value": "Value G"
-              },
-              {
-                "label": "Neighbors",
-                "value": "Value H"
-              },
-              {
-                "label": "Oxford Friends",
-                "value": "Value I"
-              },
-              {
-                "label": "Band",
-                "value": "Value J"
-              }
-            ],
             "validation": {
               "minSelected": 1,
               "maxSelected": 4
@@ -1138,25 +1354,7 @@
             "prompt": "Required likert scale",
             "validation": {
               "required": true
-            },
-            "options": [
-              {
-                "label": "Three",
-                "value": 3
-              },
-              {
-                "label": "Two",
-                "value": 2
-              },
-              {
-                "label": "One",
-                "value": 1
-              },
-              {
-                "label": "Missing",
-                "value": -1
-              }
-            ]
+            }
           },
           {
             "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
@@ -1171,41 +1369,7 @@
               "required": true,
               "minSelected": 1,
               "maxSelected": 1
-            },
-            "options": [
-              {
-                "label": "Politics",
-                "value": "politics"
-              },
-              {
-                "label": "Weather",
-                "value": "weather"
-              },
-              {
-                "label": "Work",
-                "value": "work"
-              },
-              {
-                "label": "Current events",
-                "value": "current"
-              },
-              {
-                "label": "Entertainment",
-                "value": "entertainment"
-              },
-              {
-                "label": "School",
-                "value": "school"
-              },
-              {
-                "label": "Friends",
-                "value": "friends"
-              },
-              {
-                "label": "Money",
-                "value": "money"
-              }
-            ]
+            }
           }
         ]
       },
@@ -1261,17 +1425,7 @@
           {
             "variable": "d343a91f-628d-4175-870c-957beffa0002",
             "component": "ToggleButtonGroup",
-            "label": "Two item categorical variable",
-            "options": [
-              {
-                "label": "One",
-                "value": "one"
-              },
-              {
-                "label": "Two",
-                "value": "two"
-              }
-            ]
+            "label": "Two item categorical variable"
           }
         ]
       },
