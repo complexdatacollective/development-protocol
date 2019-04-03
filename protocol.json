@@ -2,7 +2,7 @@
   "name": "Development Protocol",
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
   "lastModified": "2019-04-03T00:00:00.000Z",
-  "schemaVersion": "1",
+  "schemaVersion": "1.0.0",
   "codebook": {
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
@@ -219,8 +219,6 @@
           },
           "d2d8091e-8170-42c1-9dc0-c0d54553b3e6": {
             "name": "talk_friend",
-            "label": "Talk friend",
-            "description": "Talk friend",
             "type": "boolean"
           },
           "3435afb0-f0c3-4b8b-9297-314572569acc": {
@@ -693,7 +691,6 @@
         "fields": [
           {
             "variable": "3377af3f-3c79-41da-9b0b-6570fb519b93",
-            "value": "You",
             "component": "Text",
             "prompt": "What is your name?"
           },
@@ -1342,8 +1339,8 @@
       "type": "AlterForm",
       "label": "Alter Form",
       "subject": {
-        "type": "node",
-        "entity": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "entity": "node",
+        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
       },
       "form": {
         "title": "Modify a Person",
@@ -1425,7 +1422,7 @@
           {
             "variable": "d343a91f-628d-4175-870c-957beffa0002",
             "component": "ToggleButtonGroup",
-            "label": "Two item categorical variable"
+            "prompt": "Two item categorical variable"
           }
         ]
       },
