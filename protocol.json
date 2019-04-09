@@ -667,6 +667,11 @@
     }
   },
   "assetManifest": {
+    "previousInterview-names": {
+      "source": "previousInterview-names.json",
+      "name": "Previous Interview with names not UUIDs",
+      "type": "network"
+    },
     "previousInterview": {
       "source": "previousInterview.json",
       "name": "Previous Interview",

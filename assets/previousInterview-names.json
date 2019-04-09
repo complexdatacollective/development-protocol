@@ -1,0 +1,58 @@
+{
+  "nodes": [
+    {
+      "type": "person",
+      "attributes": {
+        "name": "Anita",
+        "last_name": "Li",
+        "nickname": "Annie",
+        "age": 23
+      }
+    },
+    {
+      "type": "person",
+      "attributes": {
+        "name": "Barry",
+        "last_name": "Smith",
+        "nickname": "Baz",
+        "age": 23
+      }
+    },
+    {
+      "type": "person",
+      "attributes": {
+        "name": "Carlito",
+        "last_name": "González",
+        "nickname": "Carl",
+        "age": 23
+      }
+    },
+    {
+      "type": "person",
+      "attributes": {
+        "name": "Dee",
+        "last_name": "Zhang",
+        "nickname": "Dee",
+        "age": 23
+      }
+    },
+    {
+      "type": "person",
+      "attributes": {
+        "name": "Eugine",
+        "last_name": "Müller",
+        "nickname": "Eu",
+        "age": 23
+      }
+    },
+    {
+      "type": "person",
+      "attributes": {
+        "name": "Eustace",
+        "last_name": "Nguyễn",
+        "nickname": "Eu",
+        "age": 24
+      }
+    }
+  ]
+}
