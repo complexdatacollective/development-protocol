@@ -7,7 +7,6 @@
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
         "name": "person",
-        "label": "Person",
         "color": "node-color-seq-1",
         "displayVariable": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
         "iconVariant": "add-a-person",
@@ -260,7 +259,6 @@
       },
       "c93af3fe-9f84-4e85-acb5-5b15f30788c7": {
         "name": "dummytype",
-        "label": "Dummy Type",
         "color": "node-color-seq-6",
         "displayVariable": "2377af3f-3c79-41da-9b0b-6570fb519b93",
         "variables": {
@@ -386,7 +384,6 @@
       },
       "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73": {
         "name": "venue",
-        "label": "Venue",
         "displayVariable": "1e9ce62c-44c5-484d-9c26-0d20cc7d7238",
         "color": "node-color-seq-4",
         "iconVariant": "add-a-place",
@@ -589,7 +586,6 @@
     "edge": {
       "77199445-9d50-4646-b0bc-6d6b0c0e06bd": {
         "name": "friend",
-        "label": "Friend",
         "color": "edge-color-seq-1",
         "variables": {
           "e343a91f-628d-4175-870c-957beffa0002": {
@@ -650,7 +646,6 @@
       },
       "867127d9-086b-403a-a3e7-2c7d32126546": {
         "name": "professional",
-        "label": "Professional",
         "color": "edge-color-seq-2",
         "variables": {
           "d343a91f-628d-4175-870c-957beffa0002": {
