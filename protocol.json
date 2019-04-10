@@ -7,7 +7,6 @@
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
         "name": "person",
-        "label": "Person",
         "color": "node-color-seq-1",
         "displayVariable": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
         "iconVariant": "add-a-person",
@@ -260,7 +259,6 @@
       },
       "c93af3fe-9f84-4e85-acb5-5b15f30788c7": {
         "name": "dummytype",
-        "label": "Dummy Type",
         "color": "node-color-seq-6",
         "displayVariable": "2377af3f-3c79-41da-9b0b-6570fb519b93",
         "variables": {
@@ -386,7 +384,6 @@
       },
       "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73": {
         "name": "venue",
-        "label": "Venue",
         "displayVariable": "1e9ce62c-44c5-484d-9c26-0d20cc7d7238",
         "color": "node-color-seq-4",
         "iconVariant": "add-a-place",
@@ -589,7 +586,6 @@
     "edge": {
       "77199445-9d50-4646-b0bc-6d6b0c0e06bd": {
         "name": "friend",
-        "label": "Friend",
         "color": "edge-color-seq-1",
         "variables": {
           "e343a91f-628d-4175-870c-957beffa0002": {
@@ -650,7 +646,6 @@
       },
       "867127d9-086b-403a-a3e7-2c7d32126546": {
         "name": "professional",
-        "label": "Professional",
         "color": "edge-color-seq-2",
         "variables": {
           "d343a91f-628d-4175-870c-957beffa0002": {
@@ -672,11 +667,16 @@
     }
   },
   "assetManifest": {
-    "previousInterview": {
+    "previousInterview-json": {
       "source": "previousInterview.json",
-      "name": "Previous Interview",
+      "name": "Previous Interview with names not UUIDs",
       "type": "network"
     },
+    "previousInterview-csv": {
+      "source": "previousInterview.csv",
+      "name": "Previous Interview in CSV format.",
+      "type": "network"
+    },    
     "HIVServices": {
       "source": "HIVServices.json",
       "name": "HIVServices",
@@ -747,7 +747,7 @@
     {
       "id": "namegen1",
       "type": "NameGenerator",
-      "label": "NG Closeness",
+      "label": "NG with external data",
       "form": {
         "title": "Add A Person",
         "fields": [
@@ -791,8 +791,8 @@
         },
         {
           "id": "another-unique-id",
-          "title": "People from your previous visit",
-          "dataSource": "previousInterview",
+          "title": "External data not using UUIDs",
+          "dataSource": "previousInterview-json",
           "filter": {
             "join": "OR",
             "rules": [
@@ -843,6 +843,51 @@
         {
           "id": "2wj",
           "text": "Second prompt with no additional attributes"
+        }
+      ]
+    },
+    {
+      "id": "namegen1a",
+      "type": "NameGenerator",
+      "label": "NG CSV File",
+      "form": {
+        "title": "Add A Person",
+        "fields": [
+          {
+            "variable": "6be95f85-c2d9-4daf-9de1-3939418af888",
+            "component": "Text",
+            "prompt": "What is this person's name?"
+          },
+          {
+            "variable": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
+            "component": "Text",
+            "prompt": "What is this person's nickname?"
+          },
+          {
+            "variable": "c5fee926-855d-4419-b5bb-54e89010cea6",
+            "component": "Number",
+            "prompt": "What is this person's age?",
+            "validation": {
+              "maxValue": 99
+            }
+          }
+        ]
+      },
+      "subject": {
+        "entity": "node",
+        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+      },
+      "panels": [
+        {
+          "id": "another-unique-id-123",
+          "title": "External data from CSV",
+          "dataSource": "previousInterview-csv"
+        }
+      ],
+      "prompts": [
+        {
+          "id": "2wedwee",
+          "text": "NameGen with CSV external data"
         }
       ]
     },
@@ -956,7 +1001,7 @@
             "b6f2c4b9-e42f-459b-8f59-a11a685f460d": 56,
             "ae44b6ba-ad49-4ecf-bf38-b65decfce000": true
           },
-          "dataSource": "previousInterview",
+          "dataSource": "previousInterview-json",
           "cardOptions": {
             "displayLabel": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
             "additionalProperties": [
@@ -1189,7 +1234,7 @@
             "b6f2c4b9-e42f-459b-8f59-a11a685f460d": 46,
             "ae44b6ba-ad49-4ecf-bf38-b65decfce000": true
           },
-          "dataSource": "previousInterview",
+          "dataSource": "previousInterview-json",
           "cardOptions": {
             "displayLabel": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
             "additionalProperties": [
@@ -1214,7 +1259,7 @@
           "additionalAttributes": {
             "94e2dee9-1c25-4b64-b8bb-4946465c3c07": true
           },
-          "dataSource": "previousInterview",
+          "dataSource": "previousInterview-json",
           "cardOptions": {
             "displayLabel": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
             "additionalProperties": [
