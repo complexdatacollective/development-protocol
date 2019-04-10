@@ -3,7 +3,7 @@
     {
       "type": "person",
       "attributes": {
-        "name": "Anita",
+        "6be95f85-c2d9-4daf-9de1-3939418af888": "Anita",
         "last_name": "Li",
         "nickname": "Annie",
         "variableNotInRegistry": "tomato",
@@ -21,9 +21,9 @@
       }
     },
     {
-      "type": "person",
+      "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
       "attributes": {
-        "name": "Carlito",
+        "6be95f85-c2d9-4daf-9de1-3939418af888": "Carlito",
         "last_name": "González",
         "nickname": "Carl",
         "variableNotInRegistry": "tomato",
@@ -41,7 +41,7 @@
       }
     },
     {
-      "type": "person",
+      "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
       "attributes": {
         "name": "Eugine",
         "last_name": "Müller",
