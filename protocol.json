@@ -681,6 +681,11 @@
       "source": "HIVServices.json",
       "name": "HIVServices",
       "type": "network"
+    },
+    "HIVServices-csv": {
+      "source": "HIVServices.csv",
+      "name": "HIVServices",
+      "type": "network"
     }
   },
   "stages": [
@@ -989,9 +994,9 @@
         {
           "id": "7tk",
           "text": "HIV Venue external data, with no sort options or additional attributes.",
-          "dataSource": "HIVServices",
+          "dataSource": "HIVServices-csv",
           "cardOptions": {
-            "displayLabel": "8a35cd77-7bc4-4c7e-b98a-673b6a21321f"
+            "displayLabel": "Abbreviated Name"
           }
         },
         {
@@ -1003,31 +1008,31 @@
           },
           "dataSource": "previousInterview-json",
           "cardOptions": {
-            "displayLabel": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
+            "displayLabel": "name",
             "additionalProperties": [
               {
                 "label": "Name",
-                "variable": "6be95f85-c2d9-4daf-9de1-3939418af888"
+                "variable": "last_name"
               },
               {
                 "label": "Age",
-                "variable": "c5fee926-855d-4419-b5bb-54e89010cea6"
+                "variable": "age"
               }
             ]
           },
           "sortOptions": {
             "sortOrder": [{
-              "property": "c5fee926-855d-4419-b5bb-54e89010cea6",
+              "property": "age",
               "direction": "desc"
             }],
             "sortableProperties": [
               {
                 "label": "Nickname",
-                "variable": "0e75ec18-2cb1-4606-9f18-034d28b07c19"
+                "variable": "nickname"
               },
               {
                 "label": "Age",
-                "variable": "c5fee926-855d-4419-b5bb-54e89010cea6"
+                "variable": "age"
               }
             ]
           }
