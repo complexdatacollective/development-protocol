@@ -1236,46 +1236,21 @@
           },
           "dataSource": "previousInterview-json",
           "cardOptions": {
-            "displayLabel": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
+            "displayLabel": "name",
             "additionalProperties": [
               {
                 "label": "Name",
-                "variable": "6be95f85-c2d9-4daf-9de1-3939418af888"
+                "variable": "last_name"
               },
               {
                 "label": "Age",
-                "variable": "c5fee926-855d-4419-b5bb-54e89010cea6"
+                "variable": "age"
               }
             ]
           },
           "searchOptions": {
             "fuzziness": 0.4,
-            "matchProperties": ["0e75ec18-2cb1-4606-9f18-034d28b07c19", "6be95f85-c2d9-4daf-9de1-3939418af888", "0ff25001-a2b8-46de-82a9-53143aa00d10"]
-          }
-        },
-        {
-          "id": "7cl2",
-          "text": "Within the past 6 months, who has been supportive?",
-          "additionalAttributes": {
-            "94e2dee9-1c25-4b64-b8bb-4946465c3c07": true
-          },
-          "dataSource": "previousInterview-json",
-          "cardOptions": {
-            "displayLabel": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
-            "additionalProperties": [
-              {
-                "label": "Name",
-                "variable": "6be95f85-c2d9-4daf-9de1-3939418af888"
-              },
-              {
-                "label": "Age",
-                "variable": "c5fee926-855d-4419-b5bb-54e89010cea6"
-              }
-            ]
-          },
-          "searchOptions": {
-            "fuzziness": 0.4,
-            "matchProperties": ["0e75ec18-2cb1-4606-9f18-034d28b07c19", "6be95f85-c2d9-4daf-9de1-3939418af888", "0ff25001-a2b8-46de-82a9-53143aa00d10"]
+            "matchProperties": ["variableNotInRegistry", "nickname", "last_name"]
           }
         }
       ]
