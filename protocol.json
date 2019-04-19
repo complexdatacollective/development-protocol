@@ -457,6 +457,10 @@
           "0a5f7952-a9a7-4e87-9353-2d17a59284ee": {
             "name": "rawaddr",
             "type": "text"
+          },
+          "0a5f7952-a9a7-4e87-9353-2d17a592ssss": {
+            "name": "Layout",
+            "type": "layout"
           }
         }
       }
@@ -1013,7 +1017,7 @@
       "prompts": [
         {
           "id": "7cl",
-          "text": "Which classmates would you also think of as friends?",
+          "text": "previous interview JSON",
           "additionalAttributes": {
             "b6f2c4b9-e42f-459b-8f59-a11a685f460d": 56,
             "ae44b6ba-ad49-4ecf-bf38-b65decfce000": true
@@ -1163,9 +1167,9 @@
         },
         {
           "id": "closeness2",
-          "text": "This is a prompt showing no background and highlighting a variable.",
+          "text": "Toggle variable",
           "layout": {
-            "layoutVariable": "e13ca72d-aefe-4f48-841d-09f020e0e987",
+            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988",
             "allowPositioning": true
           },
           "sortOrder": [
@@ -1207,7 +1211,7 @@
       "label": "Sociogram with background image",
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
       },
       "background": {
         "image": "quadrant.svg",
@@ -1225,12 +1229,8 @@
             }
           ],
           "layout": {
-            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988",
+            "layoutVariable": "0a5f7952-a9a7-4e87-9353-2d17a592ssss",
             "allowPositioning": true
-          },
-          "edges": {
-            "display": ["77199445-9d50-4646-b0bc-6d6b0c0e06bd", "867127d9-086b-403a-a3e7-2c7d32126546"],
-            "create": "77199445-9d50-4646-b0bc-6d6b0c0e06bd"
           }
         }
       ]
