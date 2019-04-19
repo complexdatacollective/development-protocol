@@ -982,6 +982,26 @@
       ]
     },
     {
+      "id": "namegenroster2a",
+      "type": "NameGeneratorList",
+      "label": "NG HIV Services",
+      "showExistingNodes": true,
+      "subject": {
+        "entity": "node",
+        "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
+      },
+      "prompts": [
+        {
+          "id": "7tk",
+          "text": "HIV Venue CSV data, with no sort options or additional attributes.",
+          "dataSource": "HIVServices-csv",
+          "cardOptions": {
+            "displayLabel": "Abbreviated Name"
+          }
+        }
+      ]
+    },
+    {
       "id": "namegenroster2",
       "type": "NameGeneratorList",
       "label": "NG Classmates",
@@ -991,14 +1011,6 @@
         "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
       },
       "prompts": [
-        {
-          "id": "7tk",
-          "text": "HIV Venue external data, with no sort options or additional attributes.",
-          "dataSource": "HIVServices-csv",
-          "cardOptions": {
-            "displayLabel": "Abbreviated Name"
-          }
-        },
         {
           "id": "7cl",
           "text": "Which classmates would you also think of as friends?",
