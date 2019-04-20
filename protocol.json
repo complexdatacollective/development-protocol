@@ -457,6 +457,10 @@
           "0a5f7952-a9a7-4e87-9353-2d17a59284ee": {
             "name": "rawaddr",
             "type": "text"
+          },
+          "0a5f7952-a9a7-4e87-9353-2d17a592ssss": {
+            "name": "Layout",
+            "type": "layout"
           }
         }
       }
@@ -679,6 +683,11 @@
     },    
     "HIVServices": {
       "source": "HIVServices.json",
+      "name": "HIVServices",
+      "type": "network"
+    },
+    "HIVServices-csv": {
+      "source": "HIVServices.csv",
       "name": "HIVServices",
       "type": "network"
     }
@@ -977,6 +986,26 @@
       ]
     },
     {
+      "id": "namegenroster2a",
+      "type": "NameGeneratorList",
+      "label": "NG HIV Services",
+      "showExistingNodes": true,
+      "subject": {
+        "entity": "node",
+        "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
+      },
+      "prompts": [
+        {
+          "id": "7tk",
+          "text": "HIV Venue CSV data, with no sort options or additional attributes.",
+          "dataSource": "HIVServices-csv",
+          "cardOptions": {
+            "displayLabel": "Abbreviated Name"
+          }
+        }
+      ]
+    },
+    {
       "id": "namegenroster2",
       "type": "NameGeneratorList",
       "label": "NG Classmates",
@@ -987,47 +1016,39 @@
       },
       "prompts": [
         {
-          "id": "7tk",
-          "text": "HIV Venue external data, with no sort options or additional attributes.",
-          "dataSource": "HIVServices",
-          "cardOptions": {
-            "displayLabel": "8a35cd77-7bc4-4c7e-b98a-673b6a21321f"
-          }
-        },
-        {
           "id": "7cl",
-          "text": "Which classmates would you also think of as friends?",
+          "text": "previous interview JSON",
           "additionalAttributes": {
             "b6f2c4b9-e42f-459b-8f59-a11a685f460d": 56,
             "ae44b6ba-ad49-4ecf-bf38-b65decfce000": true
           },
           "dataSource": "previousInterview-json",
           "cardOptions": {
-            "displayLabel": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
+            "displayLabel": "name",
             "additionalProperties": [
               {
                 "label": "Name",
-                "variable": "6be95f85-c2d9-4daf-9de1-3939418af888"
+                "variable": "last_name"
               },
               {
                 "label": "Age",
-                "variable": "c5fee926-855d-4419-b5bb-54e89010cea6"
+                "variable": "age"
               }
             ]
           },
           "sortOptions": {
             "sortOrder": [{
-              "property": "c5fee926-855d-4419-b5bb-54e89010cea6",
+              "property": "age",
               "direction": "desc"
             }],
             "sortableProperties": [
               {
                 "label": "Nickname",
-                "variable": "0e75ec18-2cb1-4606-9f18-034d28b07c19"
+                "variable": "nickname"
               },
               {
                 "label": "Age",
-                "variable": "c5fee926-855d-4419-b5bb-54e89010cea6"
+                "variable": "age"
               }
             ]
           }
@@ -1146,9 +1167,9 @@
         },
         {
           "id": "closeness2",
-          "text": "This is a prompt showing no background and highlighting a variable.",
+          "text": "Toggle variable",
           "layout": {
-            "layoutVariable": "e13ca72d-aefe-4f48-841d-09f020e0e987",
+            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988",
             "allowPositioning": true
           },
           "sortOrder": [
@@ -1190,7 +1211,7 @@
       "label": "Sociogram with background image",
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
       },
       "background": {
         "image": "quadrant.svg",
@@ -1208,12 +1229,8 @@
             }
           ],
           "layout": {
-            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988",
+            "layoutVariable": "0a5f7952-a9a7-4e87-9353-2d17a592ssss",
             "allowPositioning": true
-          },
-          "edges": {
-            "display": ["77199445-9d50-4646-b0bc-6d6b0c0e06bd", "867127d9-086b-403a-a3e7-2c7d32126546"],
-            "create": "77199445-9d50-4646-b0bc-6d6b0c0e06bd"
           }
         }
       ]
@@ -1236,46 +1253,21 @@
           },
           "dataSource": "previousInterview-json",
           "cardOptions": {
-            "displayLabel": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
+            "displayLabel": "name",
             "additionalProperties": [
               {
                 "label": "Name",
-                "variable": "6be95f85-c2d9-4daf-9de1-3939418af888"
+                "variable": "last_name"
               },
               {
                 "label": "Age",
-                "variable": "c5fee926-855d-4419-b5bb-54e89010cea6"
+                "variable": "age"
               }
             ]
           },
           "searchOptions": {
             "fuzziness": 0.4,
-            "matchProperties": ["0e75ec18-2cb1-4606-9f18-034d28b07c19", "6be95f85-c2d9-4daf-9de1-3939418af888", "0ff25001-a2b8-46de-82a9-53143aa00d10"]
-          }
-        },
-        {
-          "id": "7cl2",
-          "text": "Within the past 6 months, who has been supportive?",
-          "additionalAttributes": {
-            "94e2dee9-1c25-4b64-b8bb-4946465c3c07": true
-          },
-          "dataSource": "previousInterview-json",
-          "cardOptions": {
-            "displayLabel": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
-            "additionalProperties": [
-              {
-                "label": "Name",
-                "variable": "6be95f85-c2d9-4daf-9de1-3939418af888"
-              },
-              {
-                "label": "Age",
-                "variable": "c5fee926-855d-4419-b5bb-54e89010cea6"
-              }
-            ]
-          },
-          "searchOptions": {
-            "fuzziness": 0.4,
-            "matchProperties": ["0e75ec18-2cb1-4606-9f18-034d28b07c19", "6be95f85-c2d9-4daf-9de1-3939418af888", "0ff25001-a2b8-46de-82a9-53143aa00d10"]
+            "matchProperties": ["variableNotInRegistry", "nickname", "last_name"]
           }
         }
       ]
