@@ -904,7 +904,7 @@
       "id": "namegen2",
       "type": "NameGenerator",
       "label": "NG Quick add",
-      "quickAdd": true,
+      "quickAdd": "1e9ce62c-44c5-484d-9c26-0d20cc7d7238",
       "subject": {
         "entity": "node",
         "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
