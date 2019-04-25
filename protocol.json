@@ -680,7 +680,7 @@
       "source": "previousInterview.csv",
       "name": "Previous Interview in CSV format.",
       "type": "network"
-    },    
+    },
     "HIVServices": {
       "source": "HIVServices.json",
       "name": "HIVServices",
@@ -833,17 +833,26 @@
         {
           "id": "6cl",
           "text": "Who would _you_ consider to be a **close friend**?",
-          "additionalAttributes": {
-            "b6f2c4b9-e42f-459b-8f59-a11a685f460d": 46,
-            "ae44b6ba-ad49-4ecf-bf38-b65decfce000": true
-          }
+          "additionalAttributes": [
+            {
+              "variable": "b6f2c4b9-e42f-459b-8f59-a11a685f460d",
+              "value": 2
+            },
+            {
+              "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
+              "value": true
+            }
+          ]
         },
         {
           "id": "6su",
           "text": "This is a particularly long prompt, which will be discuraged in the Architect interface but might still be desired by a researcher. What does this look like rendered?",
-          "additionalAttributes": {
-            "94e2dee9-1c25-4b64-b8bb-4946465c3c07": true
-          }
+          "additionalAttributes": [
+            {
+              "variable": "94e2dee9-1c25-4b64-b8bb-4946465c3c07",
+              "value": true
+            }
+          ]
         },
         {
           "id": "2we",
@@ -920,9 +929,12 @@
         {
           "id": "6cl",
           "text": "This name generator creates venue nodes using the quick add form",
-          "additionalAttributes": {
-            "55f1fbbe-2fe5-42a7-88fb-9a8e5e659d2f": true
-          }
+          "additionalAttributes": [
+            {
+              "variable": "55f1fbbe-2fe5-42a7-88fb-9a8e5e659d2f",
+              "value": true
+            }
+          ]
         },
         {
           "id": "6su",
@@ -1018,10 +1030,16 @@
         {
           "id": "7cl",
           "text": "previous interview JSON",
-          "additionalAttributes": {
-            "b6f2c4b9-e42f-459b-8f59-a11a685f460d": 56,
-            "ae44b6ba-ad49-4ecf-bf38-b65decfce000": true
-          },
+          "additionalAttributes": [
+            {
+              "variable": "b6f2c4b9-e42f-459b-8f59-a11a685f460d",
+              "value": 1
+            },
+            {
+              "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
+              "value": true
+            }
+          ],
           "dataSource": "previousInterview-json",
           "cardOptions": {
             "displayLabel": "name",
@@ -1247,10 +1265,16 @@
         {
           "id": "7cl1",
           "text": "Which classmates would you also think of as friends?",
-          "additionalAttributes": {
-            "b6f2c4b9-e42f-459b-8f59-a11a685f460d": 46,
-            "ae44b6ba-ad49-4ecf-bf38-b65decfce000": true
-          },
+          "additionalAttributes": [
+            {
+              "variable": "b6f2c4b9-e42f-459b-8f59-a11a685f460d",
+              "value": 3
+            },
+            {
+              "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
+              "value": true
+            }
+          ],
           "dataSource": "previousInterview-json",
           "cardOptions": {
             "displayLabel": "name",
@@ -1284,9 +1308,12 @@
         {
           "id": "7su",
           "text": "Which of these venues have you visited in the previous 6 months?",
-          "additionalAttributes": {
-            "55f1fbbe-2fe5-42a7-88fb-9a8e5e659d2f": true
-          },
+          "additionalAttributes": [
+            {
+              "variable": "55f1fbbe-2fe5-42a7-88fb-9a8e5e659d2f",
+              "value": true
+            }
+          ],
           "dataSource": "HIVServices",
           "cardOptions": {
             "displayLabel": "1e9ce62c-44c5-484d-9c26-0d20cc7d7238",
