@@ -814,16 +814,6 @@
                   "operator": "EXACTLY",
                   "value": "Dee"
                 }
-              },
-              {
-                "type": "ego",
-                "id": "15218241553253",
-                "options": {
-                  "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
-                  "attribute": "6be95f85-c2d9-4daf-9de1-3939418af888",
-                  "operator": "EXACTLY",
-                  "value": "Bob"
-                }
               }
             ]
           }
