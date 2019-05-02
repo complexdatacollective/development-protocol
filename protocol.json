@@ -704,7 +704,8 @@
     "withSound": {
       "type": "video",
       "name": "withSound",
-      "source": "withSound.mp4"
+      "source": "withSound.mp4",
+      "loop": true
     }
   },
   "stages": [
@@ -1549,19 +1550,19 @@
       "items": [
         {
           "id": "a",
-          "type": "audio",
+          "type": "asset",
           "content": "click_the_thing",
           "size": "SMALL"
         },
         {
           "id": "b",
-          "type": "image",
+          "type": "asset",
           "content": "rubberduck",
           "size": "SMALL"
         },
         {
           "id": "c",
-          "type": "image",
+          "type": "asset",
           "content": "rubberduck",
           "size": "MEDIUM"
         }
@@ -1582,10 +1583,9 @@
         },
         {
           "id": "27eee84a-52c0-440d-951c-5ac35bc75168",
-          "type": "video",
+          "type": "asset",
           "content": "withSound",
-          "size": "MEDIUM",
-          "loop": true
+          "size": "MEDIUM"
         }
       ]
     },
