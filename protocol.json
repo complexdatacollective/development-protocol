@@ -690,6 +690,22 @@
       "source": "HIVServices.csv",
       "name": "HIVServices",
       "type": "network"
+    },
+    "click_the_thing": {
+      "type": "audio",
+      "name": "click_the_thing",
+      "source": "click_the_thing.mp3"
+    },
+    "rubberduck": {
+      "type": "image",
+      "name": "rubberduck",
+      "source": "rubberduck.jpg"
+    },
+    "withSound": {
+      "type": "video",
+      "name": "withSound",
+      "source": "withSound.mp4",
+      "loop": true
     }
   },
   "stages": [
@@ -1534,21 +1550,20 @@
       "items": [
         {
           "id": "a",
-          "type": "audio",
-          "content": "click_the_thing.mp3",
-          "description": "Click by clicking the thing",
+          "type": "asset",
+          "content": "click_the_thing",
           "size": "SMALL"
         },
         {
           "id": "b",
-          "type": "image",
-          "content": "rubberduck.jpg",
+          "type": "asset",
+          "content": "rubberduck",
           "size": "SMALL"
         },
         {
           "id": "c",
-          "type": "image",
-          "content": "rubberduck.jpg",
+          "type": "asset",
+          "content": "rubberduck",
           "size": "MEDIUM"
         }
       ]
@@ -1568,11 +1583,9 @@
         },
         {
           "id": "27eee84a-52c0-440d-951c-5ac35bc75168",
-          "type": "video",
-          "content": "withSound.mp4",
-          "description": "Click by clicking the thing",
-          "size": "MEDIUM",
-          "loop": true
+          "type": "asset",
+          "content": "withSound",
+          "size": "MEDIUM"
         }
       ]
     },
