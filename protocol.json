@@ -706,6 +706,16 @@
       "name": "withSound",
       "source": "withSound.mp4",
       "loop": true
+    },
+    "quadrant-1": {
+      "type": "image",
+      "name": "quadrant-svg",
+      "source": "quadrant.svg"
+    },
+    "quadrant-2": {
+      "type": "image",
+      "name": "quadrant-png",
+      "source": "quadrant.png"
     }
   },
   "stages": [
@@ -1238,7 +1248,7 @@
         "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
       },
       "background": {
-        "image": "quadrant.svg",
+        "image": "quadrant-1",
         "concentricCircles": 4,
         "skewedTowardCenter": true
       },
