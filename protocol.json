@@ -8,7 +8,6 @@
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
         "name": "person",
         "color": "node-color-seq-1",
-        "displayVariable": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
         "iconVariant": "add-a-person",
         "variables": {
           "6be95f85-c2d9-4daf-9de1-3939418af888": {
@@ -260,7 +259,6 @@
       "c93af3fe-9f84-4e85-acb5-5b15f30788c7": {
         "name": "dummytype",
         "color": "node-color-seq-6",
-        "displayVariable": "2377af3f-3c79-41da-9b0b-6570fb519b93",
         "variables": {
           "2377af3f-3c79-41da-9b0b-6570fb519b93": {
             "name": "label",
@@ -384,7 +382,6 @@
       },
       "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73": {
         "name": "venue",
-        "displayVariable": "1e9ce62c-44c5-484d-9c26-0d20cc7d7238",
         "color": "node-color-seq-4",
         "iconVariant": "add-a-place",
         "variables": {
@@ -927,9 +924,9 @@
     },
     {
       "id": "namegen2",
-      "type": "NameGenerator",
+      "type": "NameGeneratorQuickAdd",
       "label": "NG Quick add",
-      "quickAdd": "1e9ce62c-44c5-484d-9c26-0d20cc7d7238",
+      "quickAdd": "66646d68-cd33-407b-a349-56707021df72",
       "subject": {
         "entity": "node",
         "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
@@ -1017,19 +1014,15 @@
       "id": "namegenroster2a",
       "type": "NameGeneratorList",
       "label": "NG HIV Services",
-      "showExistingNodes": true,
       "subject": {
         "entity": "node",
         "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
       },
+      "dataSource": "HIVServices-csv",
       "prompts": [
         {
           "id": "7tk",
-          "text": "HIV Venue CSV data, with no sort options or additional attributes.",
-          "dataSource": "HIVServices-csv",
-          "cardOptions": {
-            "displayLabel": "Abbreviated Name"
-          }
+          "text": "HIV Venue CSV data, with no sort options or additional attributes."
         }
       ]
     },
@@ -1037,10 +1030,39 @@
       "id": "namegenroster2",
       "type": "NameGeneratorList",
       "label": "NG Classmates",
-      "showExistingNodes": true,
       "subject": {
         "entity": "node",
         "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+      },
+      "dataSource": "previousInterview-json",
+      "cardOptions": {
+        "displayLabel": "name",
+        "additionalProperties": [
+          {
+            "label": "Name",
+            "variable": "last_name"
+          },
+          {
+            "label": "Age",
+            "variable": "age"
+          }
+        ]
+      },
+      "sortOptions": {
+        "sortOrder": [{
+          "property": "age",
+          "direction": "desc"
+        }],
+        "sortableProperties": [
+          {
+            "label": "Nickname",
+            "variable": "nickname"
+          },
+          {
+            "label": "Age",
+            "variable": "age"
+          }
+        ]
       },
       "prompts": [
         {
@@ -1055,37 +1077,7 @@
               "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
               "value": true
             }
-          ],
-          "dataSource": "previousInterview-json",
-          "cardOptions": {
-            "displayLabel": "name",
-            "additionalProperties": [
-              {
-                "label": "Name",
-                "variable": "last_name"
-              },
-              {
-                "label": "Age",
-                "variable": "age"
-              }
-            ]
-          },
-          "sortOptions": {
-            "sortOrder": [{
-              "property": "age",
-              "direction": "desc"
-            }],
-            "sortableProperties": [
-              {
-                "label": "Nickname",
-                "variable": "nickname"
-              },
-              {
-                "label": "Age",
-                "variable": "age"
-              }
-            ]
-          }
+          ]
         }
       ]
     },
@@ -1277,6 +1269,24 @@
         "entity": "node",
         "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
       },
+      "dataSource": "previousInterview-json",
+      "cardOptions": {
+        "displayLabel": "name",
+        "additionalProperties": [
+          {
+            "label": "Name",
+            "variable": "last_name"
+          },
+          {
+            "label": "Age",
+            "variable": "age"
+          }
+        ]
+      },
+      "searchOptions": {
+        "fuzziness": 0.4,
+        "matchProperties": ["variableNotInRegistry", "nickname", "last_name"]
+      },
       "prompts": [
         {
           "id": "7cl1",
@@ -1290,25 +1300,7 @@
               "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
               "value": true
             }
-          ],
-          "dataSource": "previousInterview-json",
-          "cardOptions": {
-            "displayLabel": "name",
-            "additionalProperties": [
-              {
-                "label": "Name",
-                "variable": "last_name"
-              },
-              {
-                "label": "Age",
-                "variable": "age"
-              }
-            ]
-          },
-          "searchOptions": {
-            "fuzziness": 0.4,
-            "matchProperties": ["variableNotInRegistry", "nickname", "last_name"]
-          }
+          ]
         }
       ]
     },
@@ -1320,6 +1312,28 @@
         "entity": "node",
         "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
       },
+      "dataSource": "HIVServices",
+      "cardOptions": {
+        "displayLabel": "1e9ce62c-44c5-484d-9c26-0d20cc7d7238",
+        "additionalProperties": [
+          {
+            "label": "Address",
+            "variable": "67132d2b-c371-4c57-a5eb-6520083f9d22"
+          },
+          {
+            "label": "Subsidiary/Program/Project",
+            "variable": "8ee3a187-d4be-458e-8abb-71efcc071949"
+          }
+        ]
+      },
+      "searchOptions": {
+        "fuzziness": 0.5,
+        "matchProperties": [
+          "1e9ce62c-44c5-484d-9c26-0d20cc7d7238",
+          "8ee3a187-d4be-458e-8abb-71efcc071949",
+          "67132d2b-c371-4c57-a5eb-6520083f9d22"
+        ]
+      },
       "prompts": [
         {
           "id": "7su",
@@ -1329,29 +1343,7 @@
               "variable": "55f1fbbe-2fe5-42a7-88fb-9a8e5e659d2f",
               "value": true
             }
-          ],
-          "dataSource": "HIVServices",
-          "cardOptions": {
-            "displayLabel": "1e9ce62c-44c5-484d-9c26-0d20cc7d7238",
-            "additionalProperties": [
-              {
-                "label": "Address",
-                "variable": "67132d2b-c371-4c57-a5eb-6520083f9d22"
-              },
-              {
-                "label": "Subsidiary/Program/Project",
-                "variable": "8ee3a187-d4be-458e-8abb-71efcc071949"
-              }
-            ]
-          },
-          "searchOptions": {
-            "fuzziness": 0.5,
-            "matchProperties": [
-              "1e9ce62c-44c5-484d-9c26-0d20cc7d7238",
-              "8ee3a187-d4be-458e-8abb-71efcc071949",
-              "67132d2b-c371-4c57-a5eb-6520083f9d22"
-            ]
-          }
+          ]
         }
       ]
     },
@@ -1629,7 +1621,6 @@
       ],
       "skipLogic": {
         "action": "SHOW",
-        "operator": "EXACTLY",
         "value": 3,
         "filter": {
           "join": "OR",
