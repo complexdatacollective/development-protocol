@@ -1164,8 +1164,7 @@
             }
           ],
           "layout": {
-            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988",
-            "allowPositioning": true
+            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988"
           },
           "edges": {
             "display": ["77199445-9d50-4646-b0bc-6d6b0c0e06bd", "867127d9-086b-403a-a3e7-2c7d32126546"],
@@ -1177,8 +1176,7 @@
           "text":
             "Creates a second edge type",
           "layout": {
-            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988",
-            "allowPositioning": true
+            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988"
           },
           "sortOrder": [
             {
@@ -1195,8 +1193,7 @@
           "id": "closeness2",
           "text": "Toggle variable",
           "layout": {
-            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988",
-            "allowPositioning": true
+            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988"
           },
           "sortOrder": [
             {
@@ -1208,8 +1205,7 @@
             "display": ["77199445-9d50-4646-b0bc-6d6b0c0e06bd", "867127d9-086b-403a-a3e7-2c7d32126546"]
           },
           "highlight": {
-            "variable": "03b03617-46ae-41cb-9462-9acd8a17edd6",
-            "allowHighlighting": true
+            "variable": "03b03617-46ae-41cb-9462-9acd8a17edd6"
           }
         },
         {
@@ -1217,16 +1213,14 @@
           "text":
             "This prompt shows 3 concentric circles and has create edge and allow highlight specified (against the rules!)",
           "layout": {
-            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988",
-            "allowPositioning": true
+            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988"
           },
           "edges": {
             "display": ["77199445-9d50-4646-b0bc-6d6b0c0e06bd", "867127d9-086b-403a-a3e7-2c7d32126546"],
             "create": "77199445-9d50-4646-b0bc-6d6b0c0e06bd"
           },
           "highlight": {
-            "variable": "03b03617-46ae-41cb-9462-9acd8a17edd6",
-            "allowHighlighting": true
+            "variable": "03b03617-46ae-41cb-9462-9acd8a17edd6"
           }
         }
       ]
@@ -1255,8 +1249,7 @@
             }
           ],
           "layout": {
-            "layoutVariable": "0a5f7952-a9a7-4e87-9353-2d17a592ssss",
-            "allowPositioning": true
+            "layoutVariable": "0a5f7952-a9a7-4e87-9353-2d17a592ssss"
           }
         }
       ]
