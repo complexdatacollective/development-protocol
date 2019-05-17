@@ -1036,7 +1036,6 @@
       },
       "dataSource": "previousInterview-json",
       "cardOptions": {
-        "displayLabel": "name",
         "additionalProperties": [
           {
             "label": "Name",
@@ -1266,7 +1265,6 @@
       },
       "dataSource": "previousInterview-json",
       "cardOptions": {
-        "displayLabel": "name",
         "additionalProperties": [
           {
             "label": "Name",
@@ -1309,7 +1307,6 @@
       },
       "dataSource": "HIVServices",
       "cardOptions": {
-        "displayLabel": "1e9ce62c-44c5-484d-9c26-0d20cc7d7238",
         "additionalProperties": [
           {
             "label": "Address",
