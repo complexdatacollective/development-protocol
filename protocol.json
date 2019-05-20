@@ -465,7 +465,7 @@
     "ego": {
       "variables": {
         "3377af3f-3c79-41da-9b0b-6570fb519b93": {
-          "name": "label",
+          "name": "name",
           "type": "text"
         },
         "f3eb5f0b-84ad-43f0-8db5-9f83cd3a56de": {
@@ -1613,7 +1613,6 @@
       ],
       "skipLogic": {
         "action": "SHOW",
-        "value": 3,
         "filter": {
           "join": "OR",
           "rules": [
@@ -1631,8 +1630,7 @@
               "type": "ego",
               "id": "15218241553253",
               "options": {
-                "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
-                "attribute": "6be95f85-c2d9-4daf-9de1-3939418af888",
+                "attribute": "3377af3f-3c79-41da-9b0b-6570fb519b93",
                 "operator": "EXACTLY",
                 "value": "Bob"
               }
