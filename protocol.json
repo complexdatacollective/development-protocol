@@ -12,6 +12,7 @@
         "variables": {
           "6be95f85-c2d9-4daf-9de1-3939418af888": {
             "name": "name",
+            "component": "Text",
             "type": "text"
           },
           "0ff25001-a2b8-46de-82a9-53143aa00d10": {
@@ -20,14 +21,20 @@
           },
           "c5fee926-855d-4419-b5bb-54e89010cea6": {
             "name": "age",
-            "type": "number"
+            "type": "number",
+            "component": "Number",
+            "validation": {
+              "maxValue": 99
+            }
           },
           "0e75ec18-2cb1-4606-9f18-034d28b07c19": {
             "name": "nickname",
+            "component": "Text",
             "type": "text"
           },
           "ae44b6ba-ad49-4ecf-bf38-b65decfce000": {
             "name": "close_friend",
+            "component": "Toggle",
             "type": "boolean"
           },
           "94e2dee9-1c25-4b64-b8bb-4946465c3c07": {
@@ -71,6 +78,10 @@
           "23c5a7b9-b553-4ff1-b515-6a81999773d2": {
             "name": "discussFreq",
             "type": "ordinal",
+            "component": "RadioGroup",
+            "validation": {
+              "required": true
+            },
             "options": [
               {
                 "label": "Three",
@@ -125,6 +136,10 @@
           "e343a91f-628d-4175-870c-957beffa0154": {
             "name": "catvar4",
             "type": "categorical",
+            "component": "ToggleButtonGroup",
+            "validation": {
+              "maxSelected": 2
+            },
             "options": [
               {
                 "label": "One",
@@ -173,6 +188,12 @@
           "4ccba4e2-a246-46ee-a3ff-1c70fb4c449c": {
             "name": "discussType",
             "type": "categorical",
+            "component": "ToggleButtonGroup",
+            "validation": {
+              "required": true,
+              "minSelected": 1,
+              "maxSelected": 1
+            },
             "options": [
               {
                 "label": "Politics",
@@ -262,14 +283,17 @@
         "variables": {
           "2377af3f-3c79-41da-9b0b-6570fb519b93": {
             "name": "label",
+            "component": "Text",
             "type": "text"
           },
           "e3eb5f0b-84ad-43f0-8db5-9f83cd3a56de": {
             "name": "numberVariable",
+            "component": "Number",
             "type": "number"
           },
           "57fefac9-561f-454a-8f78-81bd9470efaa": {
             "name": "booleanVariable",
+            "component": "Toggle",
             "type": "boolean"
           },
           "d7b5f733-bec1-49be-8c33-f3c772ca0653": {
@@ -283,6 +307,10 @@
           "583ad529-66c6-4c84-8e31-a31452d6b5e9": {
             "name": "ordinalVariable",
             "type": "ordinal",
+            "component": "RadioGroup",
+            "validation": {
+              "required": true
+            },
             "options": [
               {
                 "label": "Value Four",
@@ -309,6 +337,10 @@
           "e3537457-41a2-4fbf-a1f8-9235b3c1edc6": {
             "name": "categoricalVariable",
             "type": "categorical",
+            "component": "CheckboxGroup",
+            "validation": {
+              "minSelected": 1
+            },
             "options": [
               {
                 "label": "Value A has additional text to go along with it",
@@ -335,6 +367,11 @@
           "6c647977-f2d1-426f-b0c5-6d44c795c554": {
             "name": "categoricalVariable2",
             "type": "categorical",
+            "component": "ToggleButtonGroup",
+            "validation": {
+              "minSelected": 1,
+              "maxSelected": 4
+            },
             "options": [
               {
                 "label": "Friends",
@@ -466,14 +503,23 @@
       "variables": {
         "3377af3f-3c79-41da-9b0b-6570fb519b93": {
           "name": "name",
-          "type": "text"
+          "type": "text",
+          "component": "Text",
+          "validation": {
+            "required": true
+          }
         },
         "f3eb5f0b-84ad-43f0-8db5-9f83cd3a56de": {
           "name": "numberVariable",
-          "type": "number"
+          "type": "number",
+          "component": "Number",
+          "validation": {
+            "minValue": 18
+          }
         },
         "67fefac9-561f-454a-8f78-81bd9470efaa": {
           "name": "booleanVariable",
+          "component": "Toggle",
           "type": "boolean"
         },
         "e7b5f733-bec1-49be-8c33-f3c772ca0653": {
@@ -487,6 +533,10 @@
         "683ad529-66c6-4c84-8e31-a31452d6b5e9": {
           "name": "ordinalVariable",
           "type": "ordinal",
+          "component": "RadioGroup",
+          "validation": {
+            "required": true
+          },
           "options": [
             {
               "label": "Value Four",
@@ -513,6 +563,10 @@
         "f3537457-41a2-4fbf-a1f8-9235b3c1edc6": {
           "name": "categoricalVariable",
           "type": "categorical",
+          "component": "CheckboxGroup",
+          "validation": {
+            "minSelected": 1
+          },
           "options": [
             {
               "label": "Value A has additional text to go along with it",
@@ -539,6 +593,11 @@
         "7c647977-f2d1-426f-b0c5-6d44c795c554": {
           "name": "categoricalVariable2",
           "type": "categorical",
+          "component": "ToggleButtonGroup",
+          "validation": {
+            "minSelected": 1,
+            "maxSelected": 4
+          },
           "options": [
             {
               "label": "Friends",
@@ -592,6 +651,7 @@
           "e343a91f-628d-4175-870c-957beffa0002": {
             "name": "catvar2",
             "type": "categorical",
+            "component": "ToggleButtonGroup",
             "options": [
               {
                 "label": "One",
@@ -606,6 +666,7 @@
           "e343a91f-628d-4175-870c-957beffa0003": {
             "name": "catvar3",
             "type": "categorical",
+            "component": "ToggleButtonGroup",
             "options": [
               {
                 "label": "One",
@@ -624,6 +685,7 @@
           "e343a91f-628d-4175-870c-957beffa0004": {
             "name": "catvar4",
             "type": "categorical",
+            "component": "ToggleButtonGroup",
             "options": [
               {
                 "label": "One",
@@ -652,6 +714,7 @@
           "d343a91f-628d-4175-870c-957beffa0002": {
             "name": "catvar2",
             "type": "categorical",
+            "component": "ToggleButtonGroup",
             "options": [
               {
                 "label": "One",
@@ -725,48 +788,27 @@
         "fields": [
           {
             "variable": "3377af3f-3c79-41da-9b0b-6570fb519b93",
-            "component": "Text",
-            "prompt": "What is your name?",
-            "validation": {
-              "required": true
-            }
+            "prompt": "What is your name?"
           },
           {
             "variable": "f3eb5f0b-84ad-43f0-8db5-9f83cd3a56de",
-            "component": "Number",
-            "prompt": "What is your age?",
-            "validation": {
-              "minValue": 18
-            }
+            "prompt": "What is your age?"
           },
           {
             "variable": "683ad529-66c6-4c84-8e31-a31452d6b5e9",
-            "component": "RadioGroup",
-            "prompt": "How much do you like likert scales?",
-            "validation": {
-              "required": true
-            }
+            "prompt": "How much do you like likert scales?"
           },
           {
             "variable": "f3537457-41a2-4fbf-a1f8-9235b3c1edc6",
-            "component": "CheckboxGroup",
-            "prompt": "Which of these things do you like?",
-            "validation": {
-              "minSelected": 1
-            }
+            "prompt": "Which of these things do you like?"
+
           },
           {
             "variable": "7c647977-f2d1-426f-b0c5-6d44c795c554",
-            "component": "ToggleButtonGroup",
-            "prompt": "Which of these other things do you like?",
-            "validation": {
-              "minSelected": 1,
-              "maxSelected": 4
-            }
+            "prompt": "Which of these other things do you like?"
           },
           {
             "variable": "67fefac9-561f-454a-8f78-81bd9470efaa",
-            "component": "Toggle",
             "prompt": "Is the switch below not turned on?"
           }
         ]
@@ -785,29 +827,19 @@
         "fields": [
           {
             "variable": "6be95f85-c2d9-4daf-9de1-3939418af888",
-            "component": "Text",
             "prompt": "What is this person's name?"
           },
           {
             "variable": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
-            "component": "Text",
             "prompt": "What is this person's nickname?"
           },
           {
             "variable": "c5fee926-855d-4419-b5bb-54e89010cea6",
-            "component": "Number",
-            "prompt": "What is this person's age?",
-            "validation": {
-              "maxValue": 99
-            }
+            "prompt": "What is this person's age?"
           },
           {
             "variable": "e343a91f-628d-4175-870c-957beffa0154",
-            "component": "ToggleButtonGroup",
-            "prompt": "Multiple categorical membership variable",
-            "validation": {
-              "maxSelected": 2
-            }
+            "prompt": "Multiple categorical membership variable"
           }
         ]
       },
@@ -886,21 +918,15 @@
         "fields": [
           {
             "variable": "6be95f85-c2d9-4daf-9de1-3939418af888",
-            "component": "Text",
             "prompt": "What is this person's name?"
           },
           {
             "variable": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
-            "component": "Text",
             "prompt": "What is this person's nickname?"
           },
           {
             "variable": "c5fee926-855d-4419-b5bb-54e89010cea6",
-            "component": "Number",
-            "prompt": "What is this person's age?",
-            "validation": {
-              "maxValue": 99
-            }
+            "prompt": "What is this person's age?"
           }
         ]
       },
@@ -1089,42 +1115,26 @@
         "fields": [
           {
             "variable": "2377af3f-3c79-41da-9b0b-6570fb519b93",
-            "component": "Text",
             "prompt": "What is this person's name?"
           },
           {
             "variable": "e3eb5f0b-84ad-43f0-8db5-9f83cd3a56de",
-            "component": "Number",
             "prompt": "What is this person's age?"
           },
           {
             "variable": "583ad529-66c6-4c84-8e31-a31452d6b5e9",
-            "component": "RadioGroup",
-            "prompt": "How much do you like likert scales?",
-            "validation": {
-              "required": true
-            }
+            "prompt": "How much do you like likert scales?"
           },
           {
             "variable": "e3537457-41a2-4fbf-a1f8-9235b3c1edc6",
-            "component": "CheckboxGroup",
-            "prompt": "Which of these things do you like?",
-            "validation": {
-              "minSelected": 1
-            }
+            "prompt": "Which of these things do you like?"
           },
           {
             "variable": "6c647977-f2d1-426f-b0c5-6d44c795c554",
-            "component": "ToggleButtonGroup",
-            "prompt": "Which of these other things do you like?",
-            "validation": {
-              "minSelected": 1,
-              "maxSelected": 4
-            }
+            "prompt": "Which of these other things do you like?"
           },
           {
             "variable": "57fefac9-561f-454a-8f78-81bd9470efaa",
-            "component": "Toggle",
             "prompt": "Is the switch below not turned on?"
           }
         ]
@@ -1408,26 +1418,15 @@
         "fields": [
           {
             "variable": "23c5a7b9-b553-4ff1-b515-6a81999773d2",
-            "component": "RadioGroup",
-            "prompt": "Required likert scale",
-            "validation": {
-              "required": true
-            }
+            "prompt": "Required likert scale"
           },
           {
             "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
-            "component": "Toggle",
             "prompt": "Does this person have this boolean attribute?"
           },
           {
             "variable": "4ccba4e2-a246-46ee-a3ff-1c70fb4c449c",
-            "component": "ToggleButtonGroup",
-            "prompt": "Which of these does this person like?",
-            "validation": {
-              "required": true,
-              "minSelected": 1,
-              "maxSelected": 1
-            }
+            "prompt": "Which of these does this person like?"
           }
         ]
       },
@@ -1449,17 +1448,14 @@
         "fields": [
           {
             "variable": "e343a91f-628d-4175-870c-957beffa0002",
-            "component": "ToggleButtonGroup",
             "prompt": "Two item categorical variable"
           },
           {
             "variable": "e343a91f-628d-4175-870c-957beffa0003",
-            "component": "ToggleButtonGroup",
             "prompt": "Three item categorical variable"
           },
           {
             "variable": "e343a91f-628d-4175-870c-957beffa0004",
-            "component": "ToggleButtonGroup",
             "prompt": "Four item categorical variable"
           }
         ]
@@ -1482,7 +1478,6 @@
         "fields": [
           {
             "variable": "d343a91f-628d-4175-870c-957beffa0002",
-            "component": "ToggleButtonGroup",
             "prompt": "Two item categorical variable"
           }
         ]
