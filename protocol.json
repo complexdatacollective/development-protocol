@@ -1,7 +1,7 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
-  "lastModified": "2019-04-03T00:00:00.000Z",
-  "schemaVersion": "1.0.0",
+  "lastModified": "2019-09-01T00:00:00.000Z",
+  "schemaVersion": "2",
   "codebook": {
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
@@ -983,15 +983,30 @@
     {
       "id": "ordinalBin1",
       "type": "OrdinalBin",
-      "label": "Contact Freq.",
+      "label": "Contact Freq for close ties",
       "subject": {
         "entity": "node",
         "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
       },
+      "filter": {
+        "join": "AND",
+        "rules": [
+          {
+            "type": "alter",
+            "options": {
+              "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
+              "operator": "EXACTLY",
+              "attribute": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
+              "value": true
+            },
+            "id": "d1d2f846-35df-40c3-ba1c-f8e81aa2173b"
+          }
+        ]
+      },
       "prompts": [
         {
           "id": "contactFreq",
-          "text": "Contact frequency ordinal variable",
+          "text": "Contact frequency ordinal variable for close ties only",
           "variable": "1096204b-48fe-444c-b642-4ab211f7f57c",
           "bucketSortOrder": [
             {
@@ -1432,6 +1447,26 @@
       "introductionPanel": {
         "title": "Introduction to the alter form",
         "text": "This is some **markdown** that \n* explains this interface and \n* is *marked down*. \n\nBelow this might be as much additional text as the researcher desires. The container that this content is in should dynamically expand to accommodate that."
+      },
+      "skipLogic": {
+        "action": "SKIP",
+        "filter": {
+          "join": "AND",
+          "rules": [
+            {
+              "type": "alter",
+              "options": {
+                "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
+                "operator": "INCLUDES",
+                "attribute": "e343a91f-628d-4175-870c-957beffa0153",
+                "value": [
+                  "two"
+                ]
+              },
+              "id": "d9f1e1cb-59ee-4ed8-84d1-37a81518db04"
+            }
+          ]
+        }
       }
     },
     {
