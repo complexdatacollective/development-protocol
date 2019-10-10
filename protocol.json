@@ -1,6 +1,6 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
-  "lastModified": "2019-09-01T00:00:00.000Z",
+  "lastModified": "2019-10-10T15:15:59.587Z",
   "schemaVersion": 2,
   "codebook": {
     "node": {
@@ -800,7 +800,6 @@
           {
             "variable": "f3537457-41a2-4fbf-a1f8-9235b3c1edc6",
             "prompt": "Which of these things do you like?"
-
           },
           {
             "variable": "7c647977-f2d1-426f-b0c5-6d44c795c554",
@@ -1088,10 +1087,12 @@
         ]
       },
       "sortOptions": {
-        "sortOrder": [{
-          "property": "age",
-          "direction": "desc"
-        }],
+        "sortOrder": [
+          {
+            "property": "age",
+            "direction": "desc"
+          }
+        ],
         "sortableProperties": [
           {
             "label": "Nickname",
@@ -1179,7 +1180,7 @@
       "prompts": [
         {
           "id": "closeness1",
-          "text": "This interface uses the concentric circles background.",
+          "text": "This interface uses the concentric circles background and excludes John and William",
           "sortOrder": [
             {
               "property": "*",
@@ -1190,14 +1191,19 @@
             "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988"
           },
           "edges": {
-            "display": ["77199445-9d50-4646-b0bc-6d6b0c0e06bd", "867127d9-086b-403a-a3e7-2c7d32126546"],
+            "display": [
+              "867127d9-086b-403a-a3e7-2c7d32126546",
+              "77199445-9d50-4646-b0bc-6d6b0c0e06bd"
+            ],
             "create": "77199445-9d50-4646-b0bc-6d6b0c0e06bd"
+          },
+          "highlight": {
+            "allowHighlighting": false
           }
         },
         {
           "id": "edgeType2",
-          "text":
-            "Creates a second edge type",
+          "text": "Creates a second edge type",
           "layout": {
             "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988"
           },
@@ -1208,8 +1214,14 @@
             }
           ],
           "edges": {
-            "display": ["77199445-9d50-4646-b0bc-6d6b0c0e06bd", "867127d9-086b-403a-a3e7-2c7d32126546"],
+            "display": [
+              "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
+              "867127d9-086b-403a-a3e7-2c7d32126546"
+            ],
             "create": "867127d9-086b-403a-a3e7-2c7d32126546"
+          },
+          "highlight": {
+            "allowHighlighting": false
           }
         },
         {
@@ -1225,7 +1237,10 @@
             }
           ],
           "edges": {
-            "display": ["77199445-9d50-4646-b0bc-6d6b0c0e06bd", "867127d9-086b-403a-a3e7-2c7d32126546"]
+            "display": [
+              "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
+              "867127d9-086b-403a-a3e7-2c7d32126546"
+            ]
           },
           "highlight": {
             "allowHighlighting": true,
@@ -1234,13 +1249,15 @@
         },
         {
           "id": "closeness3",
-          "text":
-            "This prompt shows 3 concentric circles and has create edge and allow highlight specified (against the rules!)",
+          "text": "This prompt shows 3 concentric circles and has create edge and allow highlight specified (against the rules!)",
           "layout": {
             "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988"
           },
           "edges": {
-            "display": ["77199445-9d50-4646-b0bc-6d6b0c0e06bd", "867127d9-086b-403a-a3e7-2c7d32126546"],
+            "display": [
+              "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
+              "867127d9-086b-403a-a3e7-2c7d32126546"
+            ],
             "create": "77199445-9d50-4646-b0bc-6d6b0c0e06bd"
           },
           "highlight": {
@@ -1248,7 +1265,32 @@
             "variable": "03b03617-46ae-41cb-9462-9acd8a17edd6"
           }
         }
-      ]
+      ],
+      "filter": {
+        "join": "AND",
+        "rules": [
+          {
+            "type": "alter",
+            "options": {
+              "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
+              "operator": "NOT",
+              "attribute": "6be95f85-c2d9-4daf-9de1-3939418af888",
+              "value": "John"
+            },
+            "id": "6091efec-3ef1-4680-810f-d68f69441384"
+          },
+          {
+            "type": "alter",
+            "options": {
+              "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
+              "operator": "NOT",
+              "attribute": "6be95f85-c2d9-4daf-9de1-3939418af888",
+              "value": "William"
+            },
+            "id": "69593513-dbb9-48b8-a588-92d74d416bf7"
+          }
+        ]
+      }
     },
     {
       "id": "sociogram2",
@@ -1302,7 +1344,11 @@
       },
       "searchOptions": {
         "fuzziness": 0.4,
-        "matchProperties": ["variableNotInRegistry", "nickname", "last_name"]
+        "matchProperties": [
+          "variableNotInRegistry",
+          "nickname",
+          "last_name"
+        ]
       },
       "prompts": [
         {
@@ -1373,9 +1419,9 @@
       },
       "prompts": [
         {
+          "variable": "e343a91f-628d-4175-870c-957beffa0152",
           "id": "cat2",
-          "text": "Two",
-          "variable": "e343a91f-628d-4175-870c-957beffa0152"
+          "text": "Categorical bin excluding nodes called \"William\""
         },
         {
           "id": "cat3",
@@ -1417,7 +1463,22 @@
           "text": "Discussion type variable, with a much longer prompt than the previous prompt. Please also note that this prompt uses the max number of bins.",
           "variable": "4ccba4e2-a246-46ee-a3ff-1c70fb4c449c"
         }
-      ]
+      ],
+      "filter": {
+        "join": "AND",
+        "rules": [
+          {
+            "type": "alter",
+            "options": {
+              "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
+              "operator": "NOT",
+              "attribute": "6be95f85-c2d9-4daf-9de1-3939418af888",
+              "value": "William"
+            },
+            "id": "e7cbcb30-5d01-4c23-ae76-4ac0d6e1c7f2"
+          }
+        ]
+      }
     },
     {
       "id": "alter-form-1",
@@ -1496,7 +1557,20 @@
       },
       "introductionPanel": {
         "title": "Introduction to the alter edge form",
-        "text": "Alter edge form"
+        "text": "This per alter edge form shows friend edges, but filters any edges where either node also also has a professional edge."
+      },
+      "filter": {
+        "join": "AND",
+        "rules": [
+          {
+            "type": "edge",
+            "options": {
+              "operator": "NOT_EXISTS",
+              "type": "867127d9-086b-403a-a3e7-2c7d32126546"
+            },
+            "id": "3a6fad4a-f175-492f-87d7-0747a4e4ffca"
+          }
+        ]
       }
     },
     {
@@ -1541,7 +1615,10 @@
               "867127d9-086b-403a-a3e7-2c7d32126546"
             ]
           },
-          "highlight": ["03b03617-46ae-41cb-9462-9acd8a17edd6", "ae44b6ba-ad49-4ecf-bf38-b65decfce000"]
+          "highlight": [
+            "03b03617-46ae-41cb-9462-9acd8a17edd6",
+            "ae44b6ba-ad49-4ecf-bf38-b65decfce000"
+          ]
         },
         {
           "id": "preset2",
@@ -1553,7 +1630,9 @@
               "867127d9-086b-403a-a3e7-2c7d32126546"
             ]
           },
-          "highlight": ["03b03617-46ae-41cb-9462-9acd8a17edd6"]
+          "highlight": [
+            "03b03617-46ae-41cb-9462-9acd8a17edd6"
+          ]
         }
       ],
       "background": {
@@ -1600,8 +1679,7 @@
         {
           "id": "65192318-0ef0-454d-91b7-bbaf51380069",
           "type": "text",
-          "content":
-            "The video below has sound and is set to loop. Some arbitrary text content that can _contain_ **formatting**.",
+          "content": "The video below has sound and is set to loop. Some arbitrary text content that can _contain_ **formatting**.",
           "size": "SMALL"
         },
         {
@@ -1622,8 +1700,7 @@
           "id": "d3e52e4b-0d22-42e3-a82f-7a150daf7b6b",
           "type": "text",
           "size": "LARGE",
-          "content":
-            "# h1 Heading 8-)\n## h2 Heading\n### h3 Heading\n#### h4 Heading\n##### h5 Heading\n###### h6 Heading\n\n\n## Horizontal Rules\n\n___\n\n---\n\n***\n\n\n## Emphasis\n\n**This is bold text**\n\n__This is bold text__\n\n*This is italic text* \n\n_This is italic text_ \n# Emoji \n:blush: :heartpulse: :wave:"
+          "content": "# h1 Heading 8-)\n## h2 Heading\n### h3 Heading\n#### h4 Heading\n##### h5 Heading\n###### h6 Heading\n\n\n## Horizontal Rules\n\n___\n\n---\n\n***\n\n\n## Emphasis\n\n**This is bold text**\n\n__This is bold text__\n\n*This is italic text* \n\n_This is italic text_ \n# Emoji \n:blush: :heartpulse: :wave:"
         }
       ]
     },
