@@ -1,7 +1,7 @@
 .DS_Store
 /protocol-validation
 development-protocol.netcanvas
-Development Protocol.netcanvas
+Development.netcanvas
 
 npm-debug.log*
 yarn-debug.log*
