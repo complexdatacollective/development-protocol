@@ -10,7 +10,7 @@
         "iconVariant": "add-a-person",
         "variables": {
           "6be95f85-c2d9-4daf-9de1-3939418af888": {
-            "name": "Name",
+            "name": "name",
             "component": "Text",
             "type": "text"
           },
