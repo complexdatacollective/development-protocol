@@ -1520,9 +1520,7 @@
                 "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
                 "operator": "INCLUDES",
                 "attribute": "e343a91f-628d-4175-870c-957beffa0153",
-                "value": [
-                  "two"
-                ]
+                "value": "two"
               },
               "id": "d9f1e1cb-59ee-4ed8-84d1-37a81518db04"
             }
