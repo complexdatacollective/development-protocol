@@ -1293,6 +1293,22 @@
       }
     },
     {
+      "id": "dyad-census-1",
+      "type": "DyadCensus",
+      "label": "DyadCensus (friends)",
+      "subject": {
+        "entity": "node",
+        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+      },
+      "createEdge": "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
+      "introductionPanel": {
+        "title": "Introduction to the alter edge form",
+        "text": "This per alter edge form shows friend edges, but filters any edges where either node also also has a professional edge."
+      },
+      "filter": {
+      }
+    },
+    {
       "id": "sociogram2",
       "type": "Sociogram",
       "label": "Sociogram with background image",
