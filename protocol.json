@@ -1,7 +1,7 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
-  "lastModified": "2019-10-10T15:15:59.587Z",
-  "schemaVersion": 2,
+  "lastModified": "2019-11-25T19:00:57.093Z",
+  "schemaVersion": 3,
   "codebook": {
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
@@ -273,6 +273,25 @@
           "04298634-eb5f-450a-84dd-95d2708e10c1": {
             "name": "dataSource",
             "type": "text"
+          },
+          "490db003-3289-4969-b426-919cefb4cdf0": {
+            "type": "ordinal",
+            "component": "LikertScale",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes"
+              },
+              {
+                "value": "maybe",
+                "label": "Maybe"
+              },
+              {
+                "label": "No",
+                "value": "no"
+              }
+            ],
+            "name": "likertScaleTwo"
           }
         }
       },
@@ -413,6 +432,48 @@
                 "value": "Value J"
               }
             ]
+          },
+          "e4e0df51-4b53-4e16-9249-8587537370e9": {
+            "type": "ordinal",
+            "component": "LikertScale",
+            "options": [
+              {
+                "label": "Agree",
+                "value": "agree"
+              },
+              {
+                "label": "Somewhat Agree",
+                "value": "somewhat_agree"
+              },
+              {
+                "value": "neutral",
+                "label": "Neutral"
+              },
+              {
+                "label": "Somewhat disagree",
+                "value": "somewhat_disagree"
+              },
+              {
+                "label": "Disagree",
+                "value": "disagree"
+              }
+            ],
+            "validation": {
+              "required": true
+            },
+            "name": "likertScale"
+          },
+          "720224a3-e2d3-4729-968a-29d3f3e4fca6": {
+            "type": "scalar",
+            "component": "VisualAnalogScale",
+            "parameters": {
+              "minLabel": "Not very far",
+              "maxLabel": "Really quite far"
+            },
+            "validation": {
+              "required": true
+            },
+            "name": "visualAnalogScale"
           }
         }
       },
@@ -1151,6 +1212,14 @@
           {
             "variable": "57fefac9-561f-454a-8f78-81bd9470efaa",
             "prompt": "Is the switch below not turned on?"
+          },
+          {
+            "variable": "e4e0df51-4b53-4e16-9249-8587537370e9",
+            "prompt": "Do you like likert scales?"
+          },
+          {
+            "variable": "720224a3-e2d3-4729-968a-29d3f3e4fca6",
+            "prompt": "How far away is the moon?"
           }
         ]
       },
@@ -1502,6 +1571,10 @@
           {
             "variable": "4ccba4e2-a246-46ee-a3ff-1c70fb4c449c",
             "prompt": "Which of these does this person like?"
+          },
+          {
+            "variable": "490db003-3289-4969-b426-919cefb4cdf0",
+            "prompt": "Do you want to do another likert?"
           }
         ]
       },
