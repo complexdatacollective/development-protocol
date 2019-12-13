@@ -1,6 +1,6 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
-  "lastModified": "2019-11-25T19:00:57.093Z",
+  "lastModified": "2019-12-13T16:19:20.852Z",
   "schemaVersion": 3,
   "codebook": {
     "node": {
@@ -292,6 +292,16 @@
               }
             ],
             "name": "likertScaleTwo"
+          },
+          "9b56bc6d-6b20-4e38-9aab-4057e78e1130": {
+            "type": "datetime",
+            "component": "DatePicker",
+            "name": "compactdate"
+          },
+          "246c4d84-ebd7-41a6-8c1a-ef83938227ba": {
+            "type": "text",
+            "component": "TextArea",
+            "name": "bio"
           }
         }
       },
@@ -700,6 +710,59 @@
               "value": "Value J"
             }
           ]
+        },
+        "b4956387-cada-412f-9e97-fe352c3cc44e": {
+          "type": "text",
+          "component": "TextArea",
+          "name": "bio"
+        },
+        "300a798f-d11b-4195-91ee-3221bc586c0a": {
+          "type": "ordinal",
+          "component": "LikertScale",
+          "options": [
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "Sometimes",
+              "value": "sometimes"
+            },
+            {
+              "label": "Lots",
+              "value": "lots"
+            }
+          ],
+          "name": "Choose from a scale"
+        },
+        "03c54247-aa12-497a-b8f8-c4cb69048455": {
+          "type": "scalar",
+          "component": "VisualAnalogScale",
+          "parameters": {
+            "minLabel": "Here",
+            "maxLabel": "There"
+          },
+          "name": "vasscale"
+        },
+        "23a10bcb-bd71-46a1-a36d-4ab80cb5a1d1": {
+          "type": "datetime",
+          "component": "DatePicker",
+          "parameters": {
+            "type": "full",
+            "min": "1900-01-01"
+          },
+          "validation": {
+            "required": true
+          },
+          "name": "dob"
+        },
+        "9c47f32e-b72f-4b1b-93a2-e29766dc3012": {
+          "type": "datetime",
+          "component": "RelativeDatePicker",
+          "parameters": {
+            "before": 2
+          },
+          "name": "favourite day"
         }
       }
     },
@@ -851,6 +914,10 @@
             "prompt": "What is your name?"
           },
           {
+            "variable": "b4956387-cada-412f-9e97-fe352c3cc44e",
+            "prompt": "Tell us about yourself maybe"
+          },
+          {
             "variable": "f3eb5f0b-84ad-43f0-8db5-9f83cd3a56de",
             "prompt": "What is your age?"
           },
@@ -869,6 +936,22 @@
           {
             "variable": "67fefac9-561f-454a-8f78-81bd9470efaa",
             "prompt": "Is the switch below not turned on?"
+          },
+          {
+            "variable": "300a798f-d11b-4195-91ee-3221bc586c0a",
+            "prompt": "Do you like scales"
+          },
+          {
+            "variable": "03c54247-aa12-497a-b8f8-c4cb69048455",
+            "prompt": "Pick somewhere on the line"
+          },
+          {
+            "variable": "23a10bcb-bd71-46a1-a36d-4ab80cb5a1d1",
+            "prompt": "What is your date of birth?"
+          },
+          {
+            "variable": "9c47f32e-b72f-4b1b-93a2-e29766dc3012",
+            "prompt": "Pick your favourite day in the last 2 months"
           }
         ]
       },
@@ -1560,6 +1643,14 @@
       "form": {
         "title": "Modify a Person",
         "fields": [
+          {
+            "variable": "246c4d84-ebd7-41a6-8c1a-ef83938227ba",
+            "prompt": "What is this person's life story?"
+          },
+          {
+            "variable": "9b56bc6d-6b20-4e38-9aab-4057e78e1130",
+            "prompt": "Choose a date"
+          },
           {
             "variable": "23c5a7b9-b553-4ff1-b515-6a81999773d2",
             "prompt": "Required likert scale"
