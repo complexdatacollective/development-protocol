@@ -1,7 +1,7 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
   "lastModified": "2019-10-10T15:15:59.587Z",
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "codebook": {
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
@@ -1300,7 +1300,29 @@
         "entity": "node",
         "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
       },
-      "createEdge": "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
+      "prompts": [
+        {
+          "id": "dyadprompt1",
+          "text": "This dyad census interface prompt creates friends",
+          "sortOrder": [
+            {
+              "property": "*",
+              "direction": "desc"
+            }
+          ],
+          "createEdge": "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
+          "additionalAttributes": [
+            {
+              "variable": "b6f2c4b9-e42f-459b-8f59-a11a685f460d",
+              "value": 3
+            },
+            {
+              "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
+              "value": true
+            }
+          ]
+        }
+      ],
       "introductionPanel": {
         "title": "Introduction to the alter edge form",
         "text": "This per alter edge form shows friend edges, but filters any edges where either node also also has a professional edge."
