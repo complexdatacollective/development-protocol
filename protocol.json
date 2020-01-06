@@ -749,7 +749,7 @@
           "component": "DatePicker",
           "parameters": {
             "type": "full",
-            "min": "1900-01-01"
+            "min": "1908-04-02"
           },
           "validation": {
             "required": true
@@ -760,7 +760,7 @@
           "type": "datetime",
           "component": "RelativeDatePicker",
           "parameters": {
-            "before": 2
+            "before": 60
           },
           "name": "favourite day"
         }
@@ -951,7 +951,7 @@
           },
           {
             "variable": "9c47f32e-b72f-4b1b-93a2-e29766dc3012",
-            "prompt": "Pick your favourite day in the last 2 months"
+            "prompt": "Pick your favourite day in the last 60 days"
           }
         ]
       },
