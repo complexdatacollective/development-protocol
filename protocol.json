@@ -1,7 +1,7 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
-  "lastModified": "2019-10-10T15:15:59.587Z",
-  "schemaVersion": 2,
+  "lastModified": "2019-12-13T16:19:20.852Z",
+  "schemaVersion": 3,
   "codebook": {
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
@@ -273,6 +273,35 @@
           "04298634-eb5f-450a-84dd-95d2708e10c1": {
             "name": "dataSource",
             "type": "text"
+          },
+          "490db003-3289-4969-b426-919cefb4cdf0": {
+            "type": "ordinal",
+            "component": "LikertScale",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes"
+              },
+              {
+                "value": "maybe",
+                "label": "Maybe"
+              },
+              {
+                "label": "No",
+                "value": "no"
+              }
+            ],
+            "name": "likertScaleTwo"
+          },
+          "9b56bc6d-6b20-4e38-9aab-4057e78e1130": {
+            "type": "datetime",
+            "component": "DatePicker",
+            "name": "compactdate"
+          },
+          "246c4d84-ebd7-41a6-8c1a-ef83938227ba": {
+            "type": "text",
+            "component": "TextArea",
+            "name": "bio"
           }
         }
       },
@@ -413,6 +442,48 @@
                 "value": "Value J"
               }
             ]
+          },
+          "e4e0df51-4b53-4e16-9249-8587537370e9": {
+            "type": "ordinal",
+            "component": "LikertScale",
+            "options": [
+              {
+                "label": "Agree",
+                "value": "agree"
+              },
+              {
+                "label": "Somewhat Agree",
+                "value": "somewhat_agree"
+              },
+              {
+                "value": "neutral",
+                "label": "Neutral"
+              },
+              {
+                "label": "Somewhat disagree",
+                "value": "somewhat_disagree"
+              },
+              {
+                "label": "Disagree",
+                "value": "disagree"
+              }
+            ],
+            "validation": {
+              "required": true
+            },
+            "name": "likertScale"
+          },
+          "720224a3-e2d3-4729-968a-29d3f3e4fca6": {
+            "type": "scalar",
+            "component": "VisualAnalogScale",
+            "parameters": {
+              "minLabel": "Not very far",
+              "maxLabel": "Really quite far"
+            },
+            "validation": {
+              "required": true
+            },
+            "name": "visualAnalogScale"
           }
         }
       },
@@ -639,6 +710,59 @@
               "value": "Value J"
             }
           ]
+        },
+        "b4956387-cada-412f-9e97-fe352c3cc44e": {
+          "type": "text",
+          "component": "TextArea",
+          "name": "bio"
+        },
+        "300a798f-d11b-4195-91ee-3221bc586c0a": {
+          "type": "ordinal",
+          "component": "LikertScale",
+          "options": [
+            {
+              "label": "0",
+              "value": 0
+            },
+            {
+              "label": "Sometimes",
+              "value": "sometimes"
+            },
+            {
+              "label": "Lots",
+              "value": "lots"
+            }
+          ],
+          "name": "Choose from a scale"
+        },
+        "03c54247-aa12-497a-b8f8-c4cb69048455": {
+          "type": "scalar",
+          "component": "VisualAnalogScale",
+          "parameters": {
+            "minLabel": "Here",
+            "maxLabel": "There"
+          },
+          "name": "vasscale"
+        },
+        "23a10bcb-bd71-46a1-a36d-4ab80cb5a1d1": {
+          "type": "datetime",
+          "component": "DatePicker",
+          "parameters": {
+            "type": "full",
+            "min": "1908-04-02"
+          },
+          "validation": {
+            "required": true
+          },
+          "name": "dob"
+        },
+        "9c47f32e-b72f-4b1b-93a2-e29766dc3012": {
+          "type": "datetime",
+          "component": "RelativeDatePicker",
+          "parameters": {
+            "before": 60
+          },
+          "name": "favourite day"
         }
       }
     },
@@ -790,6 +914,10 @@
             "prompt": "What is your name?"
           },
           {
+            "variable": "b4956387-cada-412f-9e97-fe352c3cc44e",
+            "prompt": "Tell us about yourself maybe"
+          },
+          {
             "variable": "f3eb5f0b-84ad-43f0-8db5-9f83cd3a56de",
             "prompt": "What is your age?"
           },
@@ -808,6 +936,22 @@
           {
             "variable": "67fefac9-561f-454a-8f78-81bd9470efaa",
             "prompt": "Is the switch below not turned on?"
+          },
+          {
+            "variable": "300a798f-d11b-4195-91ee-3221bc586c0a",
+            "prompt": "Do you like scales"
+          },
+          {
+            "variable": "03c54247-aa12-497a-b8f8-c4cb69048455",
+            "prompt": "Pick somewhere on the line"
+          },
+          {
+            "variable": "23a10bcb-bd71-46a1-a36d-4ab80cb5a1d1",
+            "prompt": "What is your date of birth?"
+          },
+          {
+            "variable": "9c47f32e-b72f-4b1b-93a2-e29766dc3012",
+            "prompt": "Pick your favourite day in the last 60 days"
           }
         ]
       },
@@ -1151,6 +1295,14 @@
           {
             "variable": "57fefac9-561f-454a-8f78-81bd9470efaa",
             "prompt": "Is the switch below not turned on?"
+          },
+          {
+            "variable": "e4e0df51-4b53-4e16-9249-8587537370e9",
+            "prompt": "Do you like likert scales?"
+          },
+          {
+            "variable": "720224a3-e2d3-4729-968a-29d3f3e4fca6",
+            "prompt": "How far away is the moon?"
           }
         ]
       },
@@ -1492,6 +1644,14 @@
         "title": "Modify a Person",
         "fields": [
           {
+            "variable": "246c4d84-ebd7-41a6-8c1a-ef83938227ba",
+            "prompt": "What is this person's life story?"
+          },
+          {
+            "variable": "9b56bc6d-6b20-4e38-9aab-4057e78e1130",
+            "prompt": "Choose a date"
+          },
+          {
             "variable": "23c5a7b9-b553-4ff1-b515-6a81999773d2",
             "prompt": "Required likert scale"
           },
@@ -1502,6 +1662,10 @@
           {
             "variable": "4ccba4e2-a246-46ee-a3ff-1c70fb4c449c",
             "prompt": "Which of these does this person like?"
+          },
+          {
+            "variable": "490db003-3289-4969-b426-919cefb4cdf0",
+            "prompt": "Do you want to do another likert?"
           }
         ]
       },
