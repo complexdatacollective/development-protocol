@@ -8,7 +8,7 @@ jobs:
       script:
         - zip Development.netcanvas * -r -0
         - git clone https://github.com/codaco/protocol-validation.git && cd protocol-validation
-        - git checkout schema/version-3
+        - git checkout schema/version-4
         - npm install
         - npm run validate-protocol ../Development.netcanvas
       before_deploy:

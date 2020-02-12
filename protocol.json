@@ -1,7 +1,7 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
-  "lastModified": "2019-12-13T16:19:20.852Z",
-  "schemaVersion": 3,
+  "lastModified": "2020-02-12T11:09:14.146Z",
+  "schemaVersion": 4,
   "codebook": {
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
@@ -125,10 +125,6 @@
               {
                 "label": "Two",
                 "value": "two"
-              },
-              {
-                "label": "Three",
-                "value": "three"
               }
             ]
           },
@@ -302,6 +298,10 @@
             "type": "text",
             "component": "TextArea",
             "name": "bio"
+          },
+          "979c9ad7-74cb-402d-8574-3f0a91c9174d": {
+            "name": "other_variable",
+            "type": "text"
           }
         }
       },
@@ -1576,9 +1576,12 @@
           "text": "Categorical bin excluding nodes called \"William\""
         },
         {
+          "variable": "e343a91f-628d-4175-870c-957beffa0153",
           "id": "cat3",
-          "text": "Three",
-          "variable": "e343a91f-628d-4175-870c-957beffa0153"
+          "text": "Three with other",
+          "otherVariable": "979c9ad7-74cb-402d-8574-3f0a91c9174d",
+          "otherVariablePrompt": "What were you thinking of instead?",
+          "otherOptionLabel": "Not Listed"
         },
         {
           "id": "cat4",
