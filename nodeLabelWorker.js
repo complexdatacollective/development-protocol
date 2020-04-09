@@ -82,15 +82,13 @@ function nodeLabelWorker({ node, network }) {
       if (network.edges.some(
         edge => edge.from === node.networkCanvasId || edge.to === node.networkCanvasId
       )) {
-        label += '😎';
+        label += '🔗';
       } else if (node.close_friend) {
-        label += '😇';
+        label += '❤️';
       }
       break;
     case 'venue':
-      label = `🏥 ${node.name.split(' ')
-        .map(word => `${word.charAt(0).toUpperCase()}. `)
-        .join(' ')}`;
+      label = `🏥 ${node.name}`;
       break;
     default:
       break;
