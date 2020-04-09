@@ -79,8 +79,6 @@ function nodeLabelWorker({ node, network }) {
 
   switch (node.networkCanvasType) {
     case 'person':
-      const customLabel;
-
       if (network.edges.some(
         edge => edge.from === node.networkCanvasId || edge.to === node.networkCanvasId
       )) {
@@ -88,7 +86,7 @@ function nodeLabelWorker({ node, network }) {
       } else if (node.close_friend) {
         label = `❤️\u{0a}${label}`;
       }
-      return customLabel
+      break;
     case 'venue':
       label = `🏥\u{0a}${node.name}`;
       break;
