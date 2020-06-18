@@ -372,23 +372,23 @@
             "options": [
               {
                 "label": "Value A has additional text to go along with it",
-                "value": "Value A"
+                "value": "Value_A"
               },
               {
                 "label": "Value B",
-                "value": "Value B"
+                "value": "Value_B"
               },
               {
                 "label": "Value C is a label that has too much text - shorten it",
-                "value": "Value C"
+                "value": "Value_C"
               },
               {
                 "label": "Value D",
-                "value": "Value D"
+                "value": "Value_D"
               },
               {
                 "label": "Value E",
-                "value": "Value E"
+                "value": "Value_E"
               }
             ]
           },
@@ -403,43 +403,43 @@
             "options": [
               {
                 "label": "Friends",
-                "value": "Value A"
+                "value": "Value_A"
               },
               {
                 "label": "Family",
-                "value": "Value B"
+                "value": "Value_B"
               },
               {
                 "label": "Work",
-                "value": "Value C"
+                "value": "Value_C"
               },
               {
                 "label": "Church",
-                "value": "Value D"
+                "value": "Value_D"
               },
               {
                 "label": "Vikings",
-                "value": "Value E"
+                "value": "Value_E"
               },
               {
                 "label": "German Course",
-                "value": "Value F"
+                "value": "Value_F"
               },
               {
                 "label": "Gardening Club",
-                "value": "Value G"
+                "value": "Value_G"
               },
               {
                 "label": "Neighbors",
-                "value": "Value H"
+                "value": "Value_H"
               },
               {
                 "label": "Oxford Friends",
-                "value": "Value I"
+                "value": "Value_I"
               },
               {
                 "label": "Band",
-                "value": "Value J"
+                "value": "Value_J"
               }
             ]
           },
@@ -539,7 +539,7 @@
             "type": "text"
           },
           "1e9ce62c-44c5-484d-9c26-0d20cc7d7238": {
-            "name": "Abbreviated Name",
+            "name": "Abbreviated_Name",
             "type": "text"
           },
           "18fbc928-d027-42de-bc96-ff5c09bf4944": {
@@ -640,23 +640,23 @@
           "options": [
             {
               "label": "Value A has additional text to go along with it",
-              "value": "Value A"
+              "value": "Value_A"
             },
             {
               "label": "Value B",
-              "value": "Value B"
+              "value": "Value_B"
             },
             {
               "label": "Value C is a label that has too much text - shorten it",
-              "value": "Value C"
+              "value": "Value_C"
             },
             {
               "label": "Value D",
-              "value": "Value D"
+              "value": "Value_D"
             },
             {
               "label": "Value E",
-              "value": "Value E"
+              "value": "Value_E"
             }
           ]
         },
@@ -671,43 +671,43 @@
           "options": [
             {
               "label": "Friends",
-              "value": "Value A"
+              "value": "Value_A"
             },
             {
               "label": "Family",
-              "value": "Value B"
+              "value": "Value_B"
             },
             {
               "label": "Work",
-              "value": "Value C"
+              "value": "Value_C"
             },
             {
               "label": "Church",
-              "value": "Value D"
+              "value": "Value_D"
             },
             {
               "label": "Vikings",
-              "value": "Value E"
+              "value": "Value_E"
             },
             {
               "label": "German Course",
-              "value": "Value F"
+              "value": "Value_F"
             },
             {
               "label": "Gardening Club",
-              "value": "Value G"
+              "value": "Value_G"
             },
             {
               "label": "Neighbors",
-              "value": "Value H"
+              "value": "Value_H"
             },
             {
               "label": "Oxford Friends",
-              "value": "Value I"
+              "value": "Value_I"
             },
             {
               "label": "Band",
-              "value": "Value J"
+              "value": "Value_J"
             }
           ]
         },
@@ -733,7 +733,7 @@
               "value": "lots"
             }
           ],
-          "name": "Choose from a scale"
+          "name": "Choose_from_a_scale"
         },
         "03c54247-aa12-497a-b8f8-c4cb69048455": {
           "type": "scalar",
@@ -742,7 +742,7 @@
             "minLabel": "Here",
             "maxLabel": "There"
           },
-          "name": "vasscale"
+          "name": "vas_scale"
         },
         "23a10bcb-bd71-46a1-a36d-4ab80cb5a1d1": {
           "type": "datetime",
@@ -762,7 +762,7 @@
           "parameters": {
             "before": 60
           },
-          "name": "favourite day"
+          "name": "favourite_day"
         }
       }
     },
