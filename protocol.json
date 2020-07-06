@@ -236,10 +236,6 @@
             "name": "talk_friend",
             "type": "boolean"
           },
-          "3435afb0-f0c3-4b8b-9297-314572569acc": {
-            "name": "type",
-            "type": "text"
-          },
           "b6f2c4b9-e42f-459b-8f59-a11a685f460d": {
             "name": "special_category",
             "type": "ordinal",
