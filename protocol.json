@@ -236,32 +236,6 @@
             "name": "talk_friend",
             "type": "boolean"
           },
-          "b6f2c4b9-e42f-459b-8f59-a11a685f460d": {
-            "name": "special_category",
-            "type": "ordinal",
-            "options": [
-              {
-                "label": "Four",
-                "value": 4
-              },
-              {
-                "label": "Three",
-                "value": 3
-              },
-              {
-                "label": "Two",
-                "value": 2
-              },
-              {
-                "label": "One",
-                "value": 1
-              },
-              {
-                "label": "Minus One",
-                "value": -1
-              }
-            ]
-          },
           "04298634-eb5f-450a-84dd-95d2708e10c1": {
             "name": "dataSource",
             "type": "text"
@@ -1018,12 +992,12 @@
           "text": "Who would _you_ consider to be a **close friend**?",
           "additionalAttributes": [
             {
-              "variable": "b6f2c4b9-e42f-459b-8f59-a11a685f460d",
-              "value": 2
-            },
-            {
               "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
               "value": true
+            },
+            {
+              "variable": "94e2dee9-1c25-4b64-b8bb-4946465c3c07",
+              "value": false
             }
           ]
         },
@@ -1275,10 +1249,6 @@
           "text": "previous interview JSON",
           "additionalAttributes": [
             {
-              "variable": "b6f2c4b9-e42f-459b-8f59-a11a685f460d",
-              "value": 1
-            },
-            {
               "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
               "value": true
             }
@@ -1528,10 +1498,6 @@
           "id": "7cl1",
           "text": "Which classmates would you also think of as friends?",
           "additionalAttributes": [
-            {
-              "variable": "b6f2c4b9-e42f-459b-8f59-a11a685f460d",
-              "value": 3
-            },
             {
               "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
               "value": true
