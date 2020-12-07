@@ -826,48 +826,48 @@
   "assetManifest": {
     "previousInterview-json": {
       "source": "previousInterview.json",
-      "name": "Previous Interview with names not UUIDs",
+      "name": "previousInterview.json",
       "type": "network"
     },
     "previousInterview-csv": {
       "source": "previousInterview.csv",
-      "name": "Previous Interview in CSV format.",
+      "name": "previousInterview.csv",
       "type": "network"
     },
     "HIVServices": {
       "source": "HIVServices.json",
-      "name": "HIVServices",
+      "name": "HIVServices.json",
       "type": "network"
     },
     "HIVServices-csv": {
       "source": "HIVServices.csv",
-      "name": "HIVServices",
+      "name": "HIVServices.csv",
       "type": "network"
     },
     "click_the_thing": {
       "type": "audio",
-      "name": "click_the_thing",
+      "name": "click_the_thing.mp3",
       "source": "click_the_thing.mp3"
     },
     "rubberduck": {
       "type": "image",
-      "name": "rubberduck",
+      "name": "rubberduck.jpg",
       "source": "rubberduck.jpg"
     },
     "withSound": {
       "type": "video",
-      "name": "withSound",
+      "name": "withSound.mp4",
       "source": "withSound.mp4",
       "loop": true
     },
     "quadrant-1": {
       "type": "image",
-      "name": "quadrant-svg",
+      "name": "quadrant.svg",
       "source": "quadrant.svg"
     },
     "quadrant-2": {
       "type": "image",
-      "name": "quadrant-png",
+      "name": "quadrant.png",
       "source": "quadrant.png"
     }
   },
