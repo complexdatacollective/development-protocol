@@ -145,7 +145,7 @@
                 "value": "two"
               },
               {
-                "label": "**Three**",
+                "label": "***Three***",
                 "value": "three"
               },
               {
@@ -609,7 +609,7 @@
           },
           "options": [
             {
-              "label": "Value A has additional text to go along with it",
+              "label": "Value A\n- has additional text\n- to go along with it",
               "value": "Value_A"
             },
             {
@@ -699,7 +699,7 @@
               "value": "sometimes"
             },
             {
-              "label": "Lots",
+              "label": "_Lots_",
               "value": "lots"
             }
           ],
