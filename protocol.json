@@ -1,7 +1,7 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
   "lastModified": "2020-02-12T11:09:14.146Z",
-  "schemaVersion": 4,
+  "schemaVersion": 5,
   "codebook": {
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
@@ -12,7 +12,10 @@
           "6be95f85-c2d9-4daf-9de1-3939418af888": {
             "name": "name",
             "component": "Text",
-            "type": "text"
+            "type": "text",
+            "validation": {
+              "unique": ""
+            }
           },
           "0ff25001-a2b8-46de-82a9-53143aa00d10": {
             "name": "last_name",
@@ -29,7 +32,10 @@
           "0e75ec18-2cb1-4606-9f18-034d28b07c19": {
             "name": "nickname",
             "component": "Text",
-            "type": "text"
+            "type": "text",
+            "validation": {
+              "differentFrom": "6be95f85-c2d9-4daf-9de1-3939418af888"
+            }
           },
           "ae44b6ba-ad49-4ecf-bf38-b65decfce000": {
             "name": "close_friend",
@@ -732,7 +738,10 @@
           "parameters": {
             "before": 60
           },
-          "name": "favourite_day"
+          "name": "favourite_day",
+          "validation": {
+            "differentFrom": "23a10bcb-bd71-46a1-a36d-4ab80cb5a1d1"
+          }
         }
       }
     },
@@ -773,7 +782,10 @@
                 "label": "Three",
                 "value": "three"
               }
-            ]
+            ],
+            "validation": {
+              "sameAs": "e343a91f-628d-4175-870c-957beffa0002"
+            }
           },
           "e343a91f-628d-4175-870c-957beffa0004": {
             "name": "catvar4",
@@ -1003,7 +1015,7 @@
         },
         {
           "id": "6su",
-          "text": "This is a particularly long prompt, which will be discuraged in the Architect interface but might still be desired by a researcher. What does this look like rendered?",
+          "text": "This is a particularly long prompt, which will be discouraged in the Architect interface but might still be desired by a researcher. What does this look like rendered?",
           "additionalAttributes": [
             {
               "variable": "94e2dee9-1c25-4b64-b8bb-4946465c3c07",
