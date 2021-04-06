@@ -1,6 +1,6 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
-  "lastModified": "2020-02-12T11:09:14.146Z",
+  "lastModified": "2021-04-06T11:09:14.146Z",
   "schemaVersion": 5,
   "codebook": {
     "node": {
@@ -886,6 +886,7 @@
   "stages": [
     {
       "id": "ego-form-1",
+      "interviewScript": "This is a **markdown field** that contains notes for the interviewer that are printed with the codebook, and can be reviewed during the interview.\n\nFor now it will only support rich text, but not images or audio.",
       "type": "EgoForm",
       "label": "Ego Form",
       "form": {
@@ -944,6 +945,7 @@
     },
     {
       "id": "namegen1",
+      "interviewScript": "This is an example of interview script on a name generator.",
       "type": "NameGenerator",
       "label": "NG with external data",
       "form": {
