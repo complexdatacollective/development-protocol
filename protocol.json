@@ -69,7 +69,7 @@
                 "value": 1
               },
               {
-                "label": "Over two years ago",
+                "label": "_Over_ two years ago",
                 "value": -1
               }
             ]
@@ -145,7 +145,7 @@
                 "value": "two"
               },
               {
-                "label": "Three",
+                "label": "***Three***",
                 "value": "three"
               },
               {
@@ -591,7 +591,7 @@
               "value": 2
             },
             {
-              "label": "Value One is also long, with break",
+              "label": "Value One is also long, _with break_",
               "value": 1
             },
             {
@@ -609,7 +609,7 @@
           },
           "options": [
             {
-              "label": "Value A has additional text to go along with it",
+              "label": "Value A\n- has additional text\n- to go along with it",
               "value": "Value_A"
             },
             {
@@ -617,7 +617,7 @@
               "value": "Value_B"
             },
             {
-              "label": "Value C is a label that has too much text - shorten it",
+              "label": "Value C is a label that has too much text - **shorten it**",
               "value": "Value_C"
             },
             {
@@ -664,7 +664,7 @@
               "value": "Value_F"
             },
             {
-              "label": "Gardening Club",
+              "label": "_Gardening_ Club",
               "value": "Value_G"
             },
             {
@@ -699,7 +699,7 @@
               "value": "sometimes"
             },
             {
-              "label": "Lots",
+              "label": "_Lots_",
               "value": "lots"
             }
           ],
@@ -885,7 +885,7 @@
           },
           {
             "variable": "b4956387-cada-412f-9e97-fe352c3cc44e",
-            "prompt": "Tell us about yourself maybe"
+            "prompt": "Tell us about **yourself** maybe"
           },
           {
             "variable": "f3eb5f0b-84ad-43f0-8db5-9f83cd3a56de",
@@ -921,7 +921,7 @@
           },
           {
             "variable": "9c47f32e-b72f-4b1b-93a2-e29766dc3012",
-            "prompt": "Pick your favourite day in the last 60 days"
+            "prompt": "Pick your *favourite* day in the last 60 days"
           }
         ]
       },
@@ -943,7 +943,7 @@
           },
           {
             "variable": "0e75ec18-2cb1-4606-9f18-034d28b07c19",
-            "prompt": "What is this person's nickname?"
+            "prompt": "What is this person's *nickname*?"
           },
           {
             "variable": "c5fee926-855d-4419-b5bb-54e89010cea6",
@@ -1265,35 +1265,35 @@
         "fields": [
           {
             "variable": "2377af3f-3c79-41da-9b0b-6570fb519b93",
-            "prompt": "What is this person's name?"
+            "prompt": "What is this person's _name_?"
           },
           {
             "variable": "e3eb5f0b-84ad-43f0-8db5-9f83cd3a56de",
-            "prompt": "What is this person's age?"
+            "prompt": "What is this person's _age_?"
           },
           {
             "variable": "583ad529-66c6-4c84-8e31-a31452d6b5e9",
-            "prompt": "How much do you like likert scales?"
+            "prompt": "How much do you like **likert scales**?"
           },
           {
             "variable": "e3537457-41a2-4fbf-a1f8-9235b3c1edc6",
-            "prompt": "Which of these things do you like?"
+            "prompt": "Which of *these things* do you like?"
           },
           {
             "variable": "6c647977-f2d1-426f-b0c5-6d44c795c554",
-            "prompt": "Which of these other things do you like?"
+            "prompt": "Which of these **other** things do you like?"
           },
           {
             "variable": "57fefac9-561f-454a-8f78-81bd9470efaa",
-            "prompt": "Is the switch below not turned on?"
+            "prompt": "Is the switch below not turned _on_?"
           },
           {
             "variable": "e4e0df51-4b53-4e16-9249-8587537370e9",
-            "prompt": "Do you like likert scales?"
+            "prompt": "Do you like **likert scales**?"
           },
           {
             "variable": "720224a3-e2d3-4729-968a-29d3f3e4fca6",
-            "prompt": "How far away is the moon?"
+            "prompt": "How _far away_ is the moon?"
           }
         ]
       },
@@ -1699,7 +1699,7 @@
           },
           {
             "variable": "e343a91f-628d-4175-870c-957beffa0003",
-            "prompt": "Three item categorical variable"
+            "prompt": "_Three_ item categorical variable"
           },
           {
             "variable": "e343a91f-628d-4175-870c-957beffa0004",
