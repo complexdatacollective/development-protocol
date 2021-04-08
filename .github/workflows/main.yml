@@ -30,7 +30,7 @@ jobs:
       - name: Install protocol validation
         run: |
           cd protocol-validation
-          git checkout naster
+          git checkout master
           npm install
           npm run validate-protocol ../Development.netcanvas
 
