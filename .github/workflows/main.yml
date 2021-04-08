@@ -41,9 +41,15 @@ jobs:
       - name: Tag release
         run: git tag $(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
 
+      - name: Get release name
+        id: getReleaseName
+        run: echo ::set-output name=RELEASE_NAME::${GITHUB_REF/refs\/tags\//}
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: ${{ steps.getReleaseName.outputs.RELEASE_NAME }}
+          name: Release ${{ steps.getReleaseName.outputs.RELEASE_NAME }}
           files: Development.netcanvas
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
