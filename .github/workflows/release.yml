@@ -1,12 +1,13 @@
 name: CI
 on:
-  pull_request:
+  push:
+    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
-  validate:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -36,3 +37,19 @@ jobs:
         run: |
           cd protocol-validation
           npm run validate-protocol ../Development.netcanvas
+      
+      - name: Tag release
+        run: git tag $(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
+
+      - name: Get release name
+        id: getReleaseName
+        run: echo ::set-output name=RELEASE_NAME::$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.getReleaseName.outputs.RELEASE_NAME }}
+          name: ${{ steps.getReleaseName.outputs.RELEASE_NAME }}
+          files: Development.netcanvas
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
