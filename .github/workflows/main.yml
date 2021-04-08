@@ -1,0 +1,44 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Set node version
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.14.1'
+      - name: Set NPM 7
+        run: npm install -g npm@7.6.3
+
+      - name: ZIP development protocol
+        run: zip Development.netcanvas * -r -0
+
+      - name: Checkout protocol validation
+        uses: actions/checkout@v2
+        with:
+          repository: complexdatacollective/protocol-validation
+          path: protocol-validation
+
+      - name: Install protocol validation
+        run: |
+          cd protocol-validation
+          git checkout naster
+          npm install
+          npm run validate-protocol ../Development.netcanvas
+
+      # Release
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.TOKEN }}"
+          automatic_release_tag: $(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
+          title: $(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
+          files: |
+            Development.netcanvas
