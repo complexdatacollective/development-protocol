@@ -1,7 +1,7 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
-  "lastModified": "2020-02-12T11:09:14.146Z",
-  "schemaVersion": 4,
+  "lastModified": "2021-04-06T11:09:14.146Z",
+  "schemaVersion": 5,
   "codebook": {
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
@@ -12,7 +12,10 @@
           "6be95f85-c2d9-4daf-9de1-3939418af888": {
             "name": "name",
             "component": "Text",
-            "type": "text"
+            "type": "text",
+            "validation": {
+              "unique": true
+            }
           },
           "0ff25001-a2b8-46de-82a9-53143aa00d10": {
             "name": "last_name",
@@ -29,7 +32,10 @@
           "0e75ec18-2cb1-4606-9f18-034d28b07c19": {
             "name": "nickname",
             "component": "Text",
-            "type": "text"
+            "type": "text",
+            "validation": {
+              "differentFrom": "6be95f85-c2d9-4daf-9de1-3939418af888"
+            }
           },
           "ae44b6ba-ad49-4ecf-bf38-b65decfce000": {
             "name": "close_friend",
@@ -732,7 +738,10 @@
           "parameters": {
             "before": 60
           },
-          "name": "favourite_day"
+          "name": "favourite_day",
+          "validation": {
+            "differentFrom": "23a10bcb-bd71-46a1-a36d-4ab80cb5a1d1"
+          }
         }
       }
     },
@@ -741,6 +750,24 @@
         "name": "friend",
         "color": "edge-color-seq-1",
         "variables": {
+          "e343a91f-628d-4175-870c-75429857399e": {
+            "name": "friendship-strength",
+            "type": "ordinal",
+            "options": [
+              {
+                "label": "Very close",
+                "value": 3
+              },
+              {
+                "label": "Sort of close",
+                "value": 2
+              },
+              {
+                "label": "Not very close",
+                "value": 1
+              }
+            ]
+          },
           "e343a91f-628d-4175-870c-957beffa0002": {
             "name": "catvar2",
             "type": "categorical",
@@ -773,7 +800,10 @@
                 "label": "Three",
                 "value": "three"
               }
-            ]
+            ],
+            "validation": {
+              "sameAs": "e343a91f-628d-4175-870c-957beffa0002"
+            }
           },
           "e343a91f-628d-4175-870c-957beffa0004": {
             "name": "catvar4",
@@ -804,6 +834,32 @@
         "name": "professional",
         "color": "edge-color-seq-2",
         "variables": {
+          "f984jk23-628d-4175-870c-ejd8e7al8vc3": {
+            "name": "professional-strength",
+            "type": "ordinal",
+            "options": [
+              {
+                "label": "Constantly",
+                "value": 5
+              },
+              {
+                "label": "Very often",
+                "value": 4
+              },
+              {
+                "label": "Somewhat often",
+                "value": 3
+              },
+              {
+                "label": "Rarely",
+                "value": 2
+              },
+              {
+                "label": "Almost never",
+                "value": 1
+              }
+            ]
+          },
           "d343a91f-628d-4175-870c-957beffa0002": {
             "name": "catvar2",
             "type": "categorical",
@@ -874,6 +930,7 @@
   "stages": [
     {
       "id": "ego-form-1",
+      "interviewScript": "This is a **markdown field** that contains notes for the interviewer that are printed with the codebook, and can be reviewed during the interview.\n\nFor now it will only support rich text, but not images or audio.",
       "type": "EgoForm",
       "label": "Ego Form",
       "form": {
@@ -932,6 +989,7 @@
     },
     {
       "id": "namegen1",
+      "interviewScript": "This is an example of interview script on a name generator.",
       "type": "NameGenerator",
       "label": "NG with external data",
       "form": {
@@ -1003,7 +1061,7 @@
         },
         {
           "id": "6su",
-          "text": "This is a particularly long prompt, which will be discuraged in the Architect interface but might still be desired by a researcher. What does this look like rendered?",
+          "text": "This is a particularly long prompt, which will be discouraged in the Architect interface but might still be desired by a researcher. What does this look like rendered?",
           "additionalAttributes": [
             {
               "variable": "94e2dee9-1c25-4b64-b8bb-4946465c3c07",
@@ -1115,6 +1173,35 @@
           "id": "professional",
           "text": "Do these people work together?",
           "createEdge": "867127d9-086b-403a-a3e7-2c7d32126546"
+        }
+      ]
+    },
+    {
+      "id": "tie-strength-census",
+      "type": "TieStrengthCensus",
+      "label": "Tie-Strength Census",
+      "subject": {
+        "entity": "node",
+        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+      },
+      "introductionPanel": {
+        "title": "Introduction to the Tie-Strength Census",
+        "text": "This interface both creates an edge and assigns an ordinal value to it."
+      },
+      "prompts": [
+        {
+          "id": "friendship-strength",
+          "text": "Thinking about each pair of people, please choose the option that best describes **how close they are to one another**.",
+          "createEdge": "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
+          "edgeVariable": "e343a91f-628d-4175-870c-75429857399e",
+          "negativeLabel": "Don't know each other"
+        },
+        {
+          "id": "professional-strength",
+          "text": "How often do these people work together on important projects?",
+          "createEdge": "867127d9-086b-403a-a3e7-2c7d32126546",
+          "edgeVariable": "f984jk23-628d-4175-870c-ejd8e7al8vc3",
+          "negativeLabel": "Do not work together"
         }
       ]
     },
