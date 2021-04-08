@@ -52,4 +52,4 @@ jobs:
           name: Release ${{ steps.getReleaseName.outputs.RELEASE_NAME }}
           files: Development.netcanvas
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
