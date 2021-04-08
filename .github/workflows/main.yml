@@ -43,7 +43,7 @@ jobs:
 
       - name: Get release name
         id: getReleaseName
-        run: echo ::set-output name=RELEASE_NAME::${GITHUB_REF/refs\/tags\//}
+        run: echo ::set-output name=RELEASE_NAME::$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
 
       - name: Release
         uses: softprops/action-gh-release@v1
