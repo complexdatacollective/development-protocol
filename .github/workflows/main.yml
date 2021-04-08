@@ -35,6 +35,7 @@ jobs:
 
       - name: Validate protocol
         run: |
+          cd protocol-validation
           npm run validate-protocol ../Development.netcanvas
 
       - name: Create Release
