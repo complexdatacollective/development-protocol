@@ -32,13 +32,28 @@ jobs:
           cd protocol-validation
           git checkout master
           npm install
+
+      - name: Validate protocol
+        run: |
           npm run validate-protocol ../Development.netcanvas
 
-      # Release
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
-          repo_token: "${{ secrets.TOKEN }}"
-          automatic_release_tag: $(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
-          title: $(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
-          files: |
-            Development.netcanvas
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: ./Development.netcanvas
+          asset_name: Development.netcanvas
+          asset_content_type: application/zip
