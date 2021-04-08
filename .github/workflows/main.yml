@@ -41,6 +41,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: $(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
           files: Development.netcanvas
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
