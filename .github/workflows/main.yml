@@ -37,12 +37,13 @@ jobs:
         run: |
           cd protocol-validation
           npm run validate-protocol ../Development.netcanvas
+      
+      - name: Tag release
+        run: git tag $(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          # tag_name: $(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)
-          tag_name: test
           files: Development.netcanvas
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
