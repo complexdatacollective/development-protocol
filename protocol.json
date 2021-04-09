@@ -300,6 +300,24 @@
             "component": "Toggle",
             "type": "boolean"
           },
+          "683ad529-66c6-4c84-8e31-a31452dsf74k": {
+            "name": "booleanVariable3",
+            "type": "boolean",
+            "component": "Boolean",
+            "validation": {
+              "required": true
+            },
+            "options": [
+              {
+                "label": "Yes",
+                "value": true
+              },
+              {
+                "label": "No",
+                "value": false
+              }
+            ]
+          },
           "d7b5f733-bec1-49be-8c33-f3c772ca0653": {
             "name": "booleanVariable2",
             "type": "boolean"
@@ -615,7 +633,7 @@
           },
           "options": [
             {
-              "label": "Value A\n- has additional text\n- to go along with it",
+              "label": "Value A **has additional** text to go along with it",
               "value": "Value_A"
             },
             {
@@ -1373,6 +1391,10 @@
           {
             "variable": "57fefac9-561f-454a-8f78-81bd9470efaa",
             "prompt": "Is the switch below not turned _on_?"
+          },
+          {
+            "variable": "683ad529-66c6-4c84-8e31-a31452dsf74k",
+            "prompt": "This is a variable whose **value** you\n\nmust...\n\nchoose!"
           },
           {
             "variable": "e4e0df51-4b53-4e16-9249-8587537370e9",
