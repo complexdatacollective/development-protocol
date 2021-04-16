@@ -1394,7 +1394,7 @@
           },
           {
             "variable": "683ad529-66c6-4c84-8e31-a31452dsf74k",
-            "prompt": "This is a variable whose **value** you\n\nmust...\n\nchoose!"
+            "prompt": "This is a variable whose **value** you must choose!"
           },
           {
             "variable": "e4e0df51-4b53-4e16-9249-8587537370e9",
