@@ -278,6 +278,10 @@
           "979c9ad7-74cb-402d-8574-3f0a91c9174d": {
             "name": "other_variable",
             "type": "text"
+          },
+          "e1dda563-f6f6-47b7-91cb-31b4c2fdb73a": {
+            "name": "homework_friend",
+            "type": "boolean"
           }
         }
       },
@@ -1609,6 +1613,16 @@
           "additionalAttributes": [
             {
               "variable": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "31f7ee2e-6ff8-4881-9db4-ee1fc369dc5f",
+          "text": "Which of these classmates would help you with homework?\n",
+          "additionalAttributes": [
+            {
+              "variable": "e1dda563-f6f6-47b7-91cb-31b4c2fdb73a",
               "value": true
             }
           ]
