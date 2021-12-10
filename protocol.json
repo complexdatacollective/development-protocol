@@ -1433,8 +1433,10 @@
         "concentricCircles": 4,
         "skewedTowardCenter": true
       },
-      "forceDirectedLayout": {
-        "enabled": true
+      "behaviours": {
+        "automaticLayout": {
+          "enabled": true
+        }
       },
       "prompts": [
         {
