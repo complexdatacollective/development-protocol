@@ -25,12 +25,12 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: complexdatacollective/protocol-validation
+          ref: feature/schema-version-6
           path: protocol-validation
 
       - name: Install protocol validation
         run: |
           cd protocol-validation
-          git checkout master
           npm install
 
       - name: Validate protocol

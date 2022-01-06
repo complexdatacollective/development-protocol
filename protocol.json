@@ -1,7 +1,7 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
   "lastModified": "2021-04-06T11:09:14.146Z",
-  "schemaVersion": 5,
+  "schemaVersion": 6,
   "codebook": {
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
@@ -1432,6 +1432,11 @@
       "background": {
         "concentricCircles": 4,
         "skewedTowardCenter": true
+      },
+      "behaviours": {
+        "automaticLayout": {
+          "enabled": true
+        }
       },
       "prompts": [
         {
