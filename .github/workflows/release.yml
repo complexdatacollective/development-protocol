@@ -31,7 +31,6 @@ jobs:
       - name: Install protocol validation
         run: |
           cd protocol-validation
-          git checkout master
           npm install
 
       - name: Validate protocol
