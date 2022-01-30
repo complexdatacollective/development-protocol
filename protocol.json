@@ -1299,7 +1299,7 @@
     },
     {
       "id": "namegenroster2a",
-      "type": "NameGeneratorList",
+      "type": "NameGeneratorRoster",
       "label": "NG HIV Services",
       "subject": {
         "entity": "node",
@@ -1315,7 +1315,7 @@
     },
     {
       "id": "namegenroster2",
-      "type": "NameGeneratorList",
+      "type": "NameGeneratorRoster",
       "label": "NG Classmates",
       "subject": {
         "entity": "node",
@@ -1584,7 +1584,7 @@
     },
     {
       "id": "namegenroster1",
-      "type": "NameGeneratorAutoComplete",
+      "type": "NameGeneratorRoster",
       "label": "NG Classmates",
       "subject": {
         "entity": "node",
@@ -1636,7 +1636,7 @@
     },
     {
       "id": "namegenroster3",
-      "type": "NameGeneratorAutoComplete",
+      "type": "NameGeneratorRoster",
       "label": "Roster Autocomplete HIV",
       "subject": {
         "entity": "node",
