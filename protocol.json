@@ -1,7 +1,7 @@
 {
   "description": "The Network Canvas development protocol is designed for our team to test new features. It is not intended for general use.",
   "lastModified": "2021-04-06T11:09:14.146Z",
-  "schemaVersion": 6,
+  "schemaVersion": 7,
   "codebook": {
     "node": {
       "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
@@ -1156,6 +1156,10 @@
           "dataSource": "existing"
         }
       ],
+      "behaviours": {
+        "minNodes": 1,
+        "maxNodes": 8
+      },
       "prompts": [
         {
           "id": "6cl",
@@ -1304,6 +1308,10 @@
       "subject": {
         "entity": "node",
         "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
+      },
+      "behaviours": {
+        "minNodes": 1,
+        "maxNodes": 8
       },
       "dataSource": "HIVServices-csv",
       "prompts": [
@@ -1605,11 +1613,7 @@
       },
       "searchOptions": {
         "fuzziness": 0.4,
-        "matchProperties": [
-          "variableNotInRegistry",
-          "nickname",
-          "last_name"
-        ]
+        "matchProperties": ["variableNotInRegistry", "nickname", "last_name"]
       },
       "prompts": [
         {
@@ -1906,13 +1910,9 @@
           "layoutVariable": "e13ca72d-aefe-4f48-841d-09f020e0e987",
           "groupVariable": "e343a91f-628d-4175-870c-957beffa0154",
           "edges": {
-            "display": [
-              "867127d9-086b-403a-a3e7-2c7d32126546"
-            ]
+            "display": ["867127d9-086b-403a-a3e7-2c7d32126546"]
           },
-          "highlight": [
-            "03b03617-46ae-41cb-9462-9acd8a17edd6"
-          ]
+          "highlight": ["03b03617-46ae-41cb-9462-9acd8a17edd6"]
         }
       ],
       "background": {
