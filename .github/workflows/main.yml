@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: complexdatacollective/protocol-validation
-          ref: feature/schema-version-7
+          ref: feature/schema-version-8
           path: protocol-validation
 
       - name: Install protocol validation
