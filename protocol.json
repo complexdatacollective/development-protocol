@@ -102,7 +102,7 @@
         "title": "Add A Person",
         "fields": [
           {
-            "variable": "6be95f85-c2d9-4daf-9de1-3939418af888",
+            "variable": "name_variable",
             "prompt": "What is this person's name?"
           },
           {
@@ -121,7 +121,7 @@
       },
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "person_node_type"
       },
       "panels": [
         {
@@ -140,8 +140,8 @@
                 "type": "alter",
                 "id": "15218241538622",
                 "options": {
-                  "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
-                  "attribute": "6be95f85-c2d9-4daf-9de1-3939418af888",
+                  "type": "person_node_type",
+                  "attribute": "name_variable",
                   "operator": "EXACTLY",
                   "value": "Dee"
                 }
@@ -193,7 +193,7 @@
         "title": "Add A Person",
         "fields": [
           {
-            "variable": "6be95f85-c2d9-4daf-9de1-3939418af888",
+            "variable": "name_variable",
             "prompt": "What is this person's name?"
           },
           {
@@ -208,7 +208,7 @@
       },
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "person_node_type"
       },
       "panels": [
         {
@@ -228,10 +228,10 @@
       "id": "namegen2",
       "type": "NameGeneratorQuickAdd",
       "label": "NG Quick add",
-      "quickAdd": "66646d68-cd33-407b-a349-56707021df72",
+      "quickAdd": "venue_name_variable",
       "subject": {
         "entity": "node",
-        "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
+        "type": "venue_node_type"
       },
       "panels": [
         {
@@ -267,7 +267,7 @@
       "label": "Dyad Census",
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "person_node_type"
       },
       "introductionPanel": {
         "title": "Introduction to the Dyad Census",
@@ -277,12 +277,12 @@
         {
           "id": "friends",
           "text": "Are these people friends?",
-          "createEdge": "77199445-9d50-4646-b0bc-6d6b0c0e06bd"
+          "createEdge": "friend_edge_type"
         },
         {
           "id": "professional",
           "text": "Do these people work together?",
-          "createEdge": "867127d9-086b-403a-a3e7-2c7d32126546"
+          "createEdge": "professional_edge_type"
         }
       ]
     },
@@ -292,7 +292,7 @@
       "label": "Tie-Strength Census",
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "person_node_type"
       },
       "introductionPanel": {
         "title": "Introduction to the Tie-Strength Census",
@@ -302,14 +302,14 @@
         {
           "id": "friendship-strength",
           "text": "Thinking about each pair of people, please choose the option that best describes **how close they are to one another**.",
-          "createEdge": "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
+          "createEdge": "friend_edge_type",
           "edgeVariable": "e343a91f-628d-4175-870c-75429857399e",
           "negativeLabel": "Don't know each other"
         },
         {
           "id": "professional-strength",
           "text": "How often do these people work together on important projects?",
-          "createEdge": "867127d9-086b-403a-a3e7-2c7d32126546",
+          "createEdge": "professional_edge_type",
           "edgeVariable": "f984jk23-628d-4175-870c-ejd8e7al8vc3",
           "negativeLabel": "Do not work together"
         }
@@ -321,7 +321,7 @@
       "label": "Contact Freq for close ties",
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "person_node_type"
       },
       "filter": {
         "join": "AND",
@@ -329,7 +329,7 @@
           {
             "type": "alter",
             "options": {
-              "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
+              "type": "person_node_type",
               "operator": "EXACTLY",
               "attribute": "ae44b6ba-ad49-4ecf-bf38-b65decfce000",
               "value": true
@@ -374,7 +374,7 @@
       "label": "Contact Freq.",
       "subject": {
         "entity": "node",
-        "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
+        "type": "venue_node_type"
       },
       "prompts": [
         {
@@ -391,7 +391,7 @@
       "label": "NG HIV Services",
       "subject": {
         "entity": "node",
-        "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
+        "type": "venue_node_type"
       },
       "behaviours": {
         "minNodes": 1,
@@ -411,7 +411,7 @@
       "label": "NG Classmates",
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "person_node_type"
       },
       "dataSource": "previousInterview-json",
       "cardOptions": {
@@ -504,7 +504,7 @@
       },
       "subject": {
         "entity": "node",
-        "type": "c93af3fe-9f84-4e85-acb5-5b15f30788c7"
+        "type": "dummy_node_type"
       },
       "prompts": [
         {
@@ -519,7 +519,7 @@
       "label": "Sociogram",
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "person_node_type"
       },
       "background": {
         "concentricCircles": 4,
@@ -541,14 +541,11 @@
             }
           ],
           "layout": {
-            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988"
+            "layoutVariable": "layout_variable"
           },
           "edges": {
-            "display": [
-              "867127d9-086b-403a-a3e7-2c7d32126546",
-              "77199445-9d50-4646-b0bc-6d6b0c0e06bd"
-            ],
-            "create": "77199445-9d50-4646-b0bc-6d6b0c0e06bd"
+            "display": ["professional_edge_type", "friend_edge_type"],
+            "create": "friend_edge_type"
           },
           "highlight": {
             "allowHighlighting": false
@@ -558,7 +555,7 @@
           "id": "edgeType2",
           "text": "Creates a second edge type",
           "layout": {
-            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988"
+            "layoutVariable": "layout_variable"
           },
           "sortOrder": [
             {
@@ -567,11 +564,8 @@
             }
           ],
           "edges": {
-            "display": [
-              "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
-              "867127d9-086b-403a-a3e7-2c7d32126546"
-            ],
-            "create": "867127d9-086b-403a-a3e7-2c7d32126546"
+            "display": ["friend_edge_type", "professional_edge_type"],
+            "create": "professional_edge_type"
           },
           "highlight": {
             "allowHighlighting": false
@@ -581,7 +575,7 @@
           "id": "closeness2",
           "text": "Toggle variable",
           "layout": {
-            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988"
+            "layoutVariable": "layout_variable"
           },
           "sortOrder": [
             {
@@ -590,10 +584,7 @@
             }
           ],
           "edges": {
-            "display": [
-              "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
-              "867127d9-086b-403a-a3e7-2c7d32126546"
-            ]
+            "display": ["friend_edge_type", "professional_edge_type"]
           },
           "highlight": {
             "allowHighlighting": true,
@@ -604,14 +595,11 @@
           "id": "closeness3",
           "text": "This prompt shows 3 concentric circles and has create edge and allow highlight specified (against the rules!)",
           "layout": {
-            "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988"
+            "layoutVariable": "layout_variable"
           },
           "edges": {
-            "display": [
-              "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
-              "867127d9-086b-403a-a3e7-2c7d32126546"
-            ],
-            "create": "77199445-9d50-4646-b0bc-6d6b0c0e06bd"
+            "display": ["friend_edge_type", "professional_edge_type"],
+            "create": "friend_edge_type"
           },
           "highlight": {
             "allowHighlighting": true,
@@ -625,9 +613,9 @@
           {
             "type": "alter",
             "options": {
-              "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
+              "type": "person_node_type",
               "operator": "NOT",
-              "attribute": "6be95f85-c2d9-4daf-9de1-3939418af888",
+              "attribute": "name_variable",
               "value": "John"
             },
             "id": "6091efec-3ef1-4680-810f-d68f69441384"
@@ -635,9 +623,9 @@
           {
             "type": "alter",
             "options": {
-              "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
+              "type": "person_node_type",
               "operator": "NOT",
-              "attribute": "6be95f85-c2d9-4daf-9de1-3939418af888",
+              "attribute": "name_variable",
               "value": "William"
             },
             "id": "69593513-dbb9-48b8-a588-92d74d416bf7"
@@ -651,7 +639,7 @@
       "label": "Sociogram with background image",
       "subject": {
         "entity": "node",
-        "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
+        "type": "venue_node_type"
       },
       "background": {
         "image": "quadrant-1",
@@ -669,7 +657,94 @@
             }
           ],
           "layout": {
-            "layoutVariable": "0a5f7952-a9a7-4e87-9353-2d17a592ssss"
+            "layoutVariable": "venue_layout_variable"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sociogram3",
+      "type": "Sociogram",
+      "label": "Two-mode Sociogram",
+      "subject": [
+        {
+          "entity": "node",
+          "type": "venue_node_type"
+        },
+        {
+          "entity": "node",
+          "type": "person_node_type"
+        }
+      ],
+      "background": {
+        "concentricCircles": 3,
+        "skewedTowardCenter": true
+      },
+      "behaviours": {
+        "automaticLayout": {
+          "enabled": true
+        }
+      },
+      "prompts": [
+        {
+          "id": "first",
+          "text": "This sociogram displays two node types concurrently. The layout is automatic.",
+          "sortOrder": [
+            {
+              "property": "_nodeType",
+              "direction": "asc"
+            },
+            {
+              "property": {
+                "person_node_type": "name_variable",
+                "venue_node_type": "venue_layout_variable"
+              },
+              "direction": "asc"
+            }
+          ],
+          "layout": {
+            "layoutVariable": {
+              "person_node_type": "layout_variable",
+              "venue_node_type": "venue_layout_variable"
+            }
+          },
+          "edges": {
+            "display": ["friend_edge_type", "visits_edge_type"],
+            "create": "visits_edge_type",
+            "restrict": {
+              "destination": "different"
+            }
+          }
+        },
+        {
+          "id": "second",
+          "text": "This prompt creates a second edge type, but only between nodes of the same type",
+          "sortOrder": [
+            {
+              "property": "_nodeType",
+              "direction": "asc"
+            },
+            {
+              "property": {
+                "person_node_type": "name_variable",
+                "venue_node_type": "venue_layout_variable"
+              },
+              "direction": "asc"
+            }
+          ],
+          "layout": {
+            "layoutVariable": {
+              "person_node_type": "layout_variable",
+              "venue_node_type": "venue_layout_variable"
+            }
+          },
+          "edges": {
+            "display": ["friend_edge_type", "visits_edge_type"],
+            "create": "friend_edge_type",
+            "restrict": {
+              "origin": "friend_edge_type",
+              "destination": "same"
+            }
           }
         }
       ]
@@ -680,7 +755,7 @@
       "label": "NG Classmates",
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "person_node_type"
       },
       "dataSource": "previousInterview-json",
       "cardOptions": {
@@ -697,11 +772,7 @@
       },
       "searchOptions": {
         "fuzziness": 0.4,
-        "matchProperties": [
-          "variableNotInRegistry",
-          "nickname",
-          "last_name"
-        ]
+        "matchProperties": ["variableNotInRegistry", "nickname", "last_name"]
       },
       "prompts": [
         {
@@ -732,7 +803,7 @@
       "label": "Roster Autocomplete HIV",
       "subject": {
         "entity": "node",
-        "type": "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73"
+        "type": "venue_node_type"
       },
       "dataSource": "HIVServices",
       "cardOptions": {
@@ -774,7 +845,7 @@
       "label": "Contact Types",
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "person_node_type"
       },
       "prompts": [
         {
@@ -832,9 +903,9 @@
           {
             "type": "alter",
             "options": {
-              "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
+              "type": "person_node_type",
               "operator": "NOT",
-              "attribute": "6be95f85-c2d9-4daf-9de1-3939418af888",
+              "attribute": "name_variable",
               "value": "William"
             },
             "id": "e7cbcb30-5d01-4c23-ae76-4ac0d6e1c7f2"
@@ -848,7 +919,7 @@
       "label": "Alter Form",
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "person_node_type"
       },
       "form": {
         "title": "Modify a Person",
@@ -891,7 +962,7 @@
             {
               "type": "alter",
               "options": {
-                "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
+                "type": "person_node_type",
                 "operator": "INCLUDES",
                 "attribute": "e343a91f-628d-4175-870c-957beffa0153",
                 "value": "two"
@@ -908,7 +979,7 @@
       "label": "Alter Edge Form (friends)",
       "subject": {
         "entity": "edge",
-        "type": "77199445-9d50-4646-b0bc-6d6b0c0e06bd"
+        "type": "friend_edge_type"
       },
       "form": {
         "title": "Modify an Edge",
@@ -938,20 +1009,17 @@
             "type": "edge",
             "options": {
               "operator": "NOT_EXISTS",
-              "type": "867127d9-086b-403a-a3e7-2c7d32126546"
+              "type": "professional_edge_type"
             },
             "id": "3a6fad4a-f175-492f-87d7-0747a4e4ffca"
           },
           {
             "type": "alter",
             "options": {
-              "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
+              "type": "person_node_type",
               "operator": "EXCLUDES",
               "attribute": "1096204b-48fe-444c-b642-4ab211f7f57c",
-              "value": [
-                -1,
-                1
-              ]
+              "value": [-1, 1]
             },
             "id": "a4d11b5b-3801-4d7f-bf45-c0b79ad80fd5"
           }
@@ -964,7 +1032,7 @@
       "label": "Alter Edge Form (professional)",
       "subject": {
         "entity": "edge",
-        "type": "867127d9-086b-403a-a3e7-2c7d32126546"
+        "type": "professional_edge_type"
       },
       "form": {
         "title": "Modify a Professional Edge",
@@ -986,19 +1054,16 @@
       "label": "Narrative",
       "subject": {
         "entity": "node",
-        "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466"
+        "type": "person_node_type"
       },
       "presets": [
         {
           "id": "preset1",
           "label": "My preset",
-          "layoutVariable": "d13ca72d-aefe-4f48-841d-09f020e0e988",
+          "layoutVariable": "layout_variable",
           "groupVariable": "e343a91f-628d-4175-870c-957beffa0154",
           "edges": {
-            "display": [
-              "77199445-9d50-4646-b0bc-6d6b0c0e06bd",
-              "867127d9-086b-403a-a3e7-2c7d32126546"
-            ]
+            "display": ["friend_edge_type", "professional_edge_type"]
           },
           "highlight": [
             "03b03617-46ae-41cb-9462-9acd8a17edd6",
@@ -1011,13 +1076,9 @@
           "layoutVariable": "e13ca72d-aefe-4f48-841d-09f020e0e987",
           "groupVariable": "e343a91f-628d-4175-870c-957beffa0154",
           "edges": {
-            "display": [
-              "867127d9-086b-403a-a3e7-2c7d32126546"
-            ]
+            "display": ["professional_edge_type"]
           },
-          "highlight": [
-            "03b03617-46ae-41cb-9462-9acd8a17edd6"
-          ]
+          "highlight": ["03b03617-46ae-41cb-9462-9acd8a17edd6"]
         }
       ],
       "background": {
@@ -1111,8 +1172,8 @@
               "type": "alter",
               "id": "15218241538622",
               "options": {
-                "type": "4aebf73e-95e3-4fd1-95e7-237dcc4a4466",
-                "attribute": "6be95f85-c2d9-4daf-9de1-3939418af888",
+                "type": "person_node_type",
+                "attribute": "name_variable",
                 "operator": "EXACTLY",
                 "value": "Dee"
               }
@@ -1133,12 +1194,12 @@
   ],
   "codebook": {
     "node": {
-      "4aebf73e-95e3-4fd1-95e7-237dcc4a4466": {
+      "person_node_type": {
         "name": "person",
         "color": "node-color-seq-1",
         "iconVariant": "add-a-person",
         "variables": {
-          "6be95f85-c2d9-4daf-9de1-3939418af888": {
+          "name_variable": {
             "name": "name",
             "component": "Text",
             "type": "text",
@@ -1163,7 +1224,7 @@
             "component": "Text",
             "type": "text",
             "validation": {
-              "differentFrom": "6be95f85-c2d9-4daf-9de1-3939418af888"
+              "differentFrom": "name_variable"
             }
           },
           "ae44b6ba-ad49-4ecf-bf38-b65decfce000": {
@@ -1359,7 +1420,7 @@
               }
             ]
           },
-          "d13ca72d-aefe-4f48-841d-09f020e0e988": {
+          "layout_variable": {
             "name": "closenessLayout",
             "type": "layout"
           },
@@ -1414,7 +1475,7 @@
           }
         }
       },
-      "c93af3fe-9f84-4e85-acb5-5b15f30788c7": {
+      "dummy_node_type": {
         "name": "dummytype",
         "color": "node-color-seq-6",
         "variables": {
@@ -1614,12 +1675,12 @@
           }
         }
       },
-      "eda5e3bb-8e1c-4216-9e06-adc0ff6b7f73": {
+      "venue_node_type": {
         "name": "venue",
         "color": "node-color-seq-4",
         "iconVariant": "add-a-place",
         "variables": {
-          "66646d68-cd33-407b-a349-56707021df72": {
+          "venue_name_variable": {
             "name": "name",
             "type": "text"
           },
@@ -1689,7 +1750,7 @@
             "name": "rawaddr",
             "type": "text"
           },
-          "0a5f7952-a9a7-4e87-9353-2d17a592ssss": {
+          "venue_layout_variable": {
             "name": "Layout",
             "type": "layout"
           }
@@ -1908,7 +1969,7 @@
       }
     },
     "edge": {
-      "77199445-9d50-4646-b0bc-6d6b0c0e06bd": {
+      "friend_edge_type": {
         "name": "friend",
         "color": "edge-color-seq-1",
         "variables": {
@@ -1992,7 +2053,7 @@
           }
         }
       },
-      "867127d9-086b-403a-a3e7-2c7d32126546": {
+      "professional_edge_type": {
         "name": "professional",
         "color": "edge-color-seq-2",
         "variables": {
@@ -2038,6 +2099,10 @@
             ]
           }
         }
+      },
+      "visits_edge_type": {
+        "name": "visits",
+        "color": "edge-color-seq-3"
       }
     }
   },
