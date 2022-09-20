@@ -742,7 +742,7 @@
             "display": ["friend_edge_type", "visits_edge_type"],
             "create": "friend_edge_type",
             "restrict": {
-              "origin": "friend_edge_type",
+              "origin": "person_node_type",
               "destination": "same"
             }
           }
