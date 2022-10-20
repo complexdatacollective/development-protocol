@@ -380,7 +380,7 @@
         {
           "id": "visitFreq",
           "text": "Showing an ordinalbin interface with a node type other than person.",
-          "variable": "a39a86ef-18c7-4545-8fbc-d0e5894565d0",
+          "variable": "venueVisitFreqVariable",
           "color": "ord-color-seq-7"
         }
       ]
@@ -663,9 +663,91 @@
       ]
     },
     {
-      "id": "sociogram3",
+      "id": "sociogram3a",
       "type": "Sociogram",
-      "label": "Two-mode Sociogram",
+      "label": "Two-mode Sociogram (manual layout)",
+      "subject": [
+        {
+          "entity": "node",
+          "type": "venue_node_type"
+        },
+        {
+          "entity": "node",
+          "type": "person_node_type"
+        }
+      ],
+      "background": {
+        "concentricCircles": 3,
+        "skewedTowardCenter": true
+      },
+      "prompts": [
+        {
+          "id": "first",
+          "text": "This sociogram displays two node types concurrently. sortOrder is venue visit freq (asc)/person name variable and then nodeType(asc)",
+          "sortOrder": [
+            {
+              "property": "type",
+              "type": "hierarchy",
+              "hierarchy": ["venue_node_type", "person_node_type"]
+            },
+            {
+              "property": "name_variable",
+              "direction": "asc"
+            },
+            {
+              "property": "venue_layout_variable",
+              "direction": "asc"
+            }
+          ],
+          "layout": {
+            "layoutVariable": {
+              "person_node_type": "layout_variable",
+              "venue_node_type": "venue_layout_variable"
+            }
+          },
+          "edges": {
+            "display": ["friend_edge_type", "visits_edge_type"],
+            "create": "visits_edge_type",
+            "restrict": {
+              "destination": "different"
+            }
+          }
+        },
+        {
+          "id": "second",
+          "text": "This prompt creates a second edge type, but only between nodes of the same type",
+          "sortOrder": [
+            {
+              "property": "type",
+              "type": "hierarchy",
+              "hierarchy": ["venue_node_type", "person_node_type"]
+            },
+            {
+              "property": "name_variable",
+              "direction": "asc"
+            }
+          ],
+          "layout": {
+            "layoutVariable": {
+              "person_node_type": "layout_variable",
+              "venue_node_type": "venue_layout_variable"
+            }
+          },
+          "edges": {
+            "display": ["friend_edge_type", "visits_edge_type"],
+            "create": "friend_edge_type",
+            "restrict": {
+              "origin": "person_node_type",
+              "destination": "same"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "sociogram3b",
+      "type": "Sociogram",
+      "label": "Two-mode Sociogram (auto layout)",
       "subject": [
         {
           "entity": "node",
@@ -691,8 +773,9 @@
           "text": "This sociogram displays two node types concurrently. The layout is automatic.",
           "sortOrder": [
             {
-              "property": "_nodeType",
-              "direction": "asc"
+              "property": "type",
+              "type": "hierarchy",
+              "hierarchy": ["venue_node_type", "person_node_type"]
             },
             {
               "property": {
@@ -721,8 +804,9 @@
           "text": "This prompt creates a second edge type, but only between nodes of the same type",
           "sortOrder": [
             {
-              "property": "_nodeType",
-              "direction": "asc"
+              "property": "type",
+              "type": "hierarchy",
+              "hierarchy": ["venue_node_type", "person_node_type"]
             },
             {
               "property": {
@@ -1688,7 +1772,7 @@
             "name": "location",
             "type": "location"
           },
-          "a39a86ef-18c7-4545-8fbc-d0e5894565d0": {
+          "venueVisitFreqVariable": {
             "name": "visitfreq",
             "type": "ordinal",
             "options": [
