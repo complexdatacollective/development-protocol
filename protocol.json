@@ -778,10 +778,7 @@
               "hierarchy": ["venue_node_type", "person_node_type"]
             },
             {
-              "property": {
-                "person_node_type": "name_variable",
-                "venue_node_type": "venue_layout_variable"
-              },
+              "property": "name_variable",
               "direction": "asc"
             }
           ],
@@ -809,10 +806,7 @@
               "hierarchy": ["venue_node_type", "person_node_type"]
             },
             {
-              "property": {
-                "person_node_type": "name_variable",
-                "venue_node_type": "venue_layout_variable"
-              },
+              "property": "name_variable",
               "direction": "asc"
             }
           ],
