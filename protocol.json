@@ -228,7 +228,7 @@
       "id": "namegen2",
       "type": "NameGeneratorQuickAdd",
       "label": "NG Quick add",
-      "quickAdd": "venue_name_variable",
+      "quickAdd": "name_variable",
       "subject": {
         "entity": "node",
         "type": "venue_node_type"
@@ -649,7 +649,7 @@
       "prompts": [
         {
           "id": "23423",
-          "text": "This interface uses a background image",
+          "text": "This interface uses a background image. Nodes are placed in reverse nomination order.",
           "sortOrder": [
             {
               "property": "*",
@@ -683,7 +683,7 @@
       "prompts": [
         {
           "id": "first",
-          "text": "This sociogram displays two node types concurrently. sortOrder is venue visit freq (asc)/person name variable and then nodeType(asc)",
+          "text": "Two mode test for sorting. sortOrder is node type (venues, then nodes), visit freq (high low), then name (a-z)",
           "sortOrder": [
             {
               "property": "type",
@@ -691,18 +691,18 @@
               "hierarchy": ["venue_node_type", "person_node_type"]
             },
             {
-              "property": "name_variable",
-              "direction": "asc"
+              "property": "venueVisitFreqVariable",
+              "direction": "desc"
             },
             {
-              "property": "venue_layout_variable",
+              "property": "name_variable",
               "direction": "asc"
             }
           ],
           "layout": {
             "layoutVariable": {
-              "person_node_type": "layout_variable",
-              "venue_node_type": "venue_layout_variable"
+              "person_node_type": "layout_variable_manual",
+              "venue_node_type": "venue_layout_variable_manual"
             }
           },
           "edges": {
@@ -771,17 +771,6 @@
         {
           "id": "first",
           "text": "This sociogram displays two node types concurrently. The layout is automatic.",
-          "sortOrder": [
-            {
-              "property": "type",
-              "type": "hierarchy",
-              "hierarchy": ["venue_node_type", "person_node_type"]
-            },
-            {
-              "property": "name_variable",
-              "direction": "asc"
-            }
-          ],
           "layout": {
             "layoutVariable": {
               "person_node_type": "layout_variable",
@@ -799,17 +788,6 @@
         {
           "id": "second",
           "text": "This prompt creates a second edge type, but only between nodes of the same type",
-          "sortOrder": [
-            {
-              "property": "type",
-              "type": "hierarchy",
-              "hierarchy": ["venue_node_type", "person_node_type"]
-            },
-            {
-              "property": "name_variable",
-              "direction": "asc"
-            }
-          ],
           "layout": {
             "layoutVariable": {
               "person_node_type": "layout_variable",
@@ -1502,6 +1480,10 @@
             "name": "closenessLayout",
             "type": "layout"
           },
+          "layout_variable_manual": {
+            "name": "manualLayout",
+            "type": "layout"
+          },
           "e13ca72d-aefe-4f48-841d-09f020e0e987": {
             "name": "anotherLayout",
             "type": "layout"
@@ -1758,7 +1740,7 @@
         "color": "node-color-seq-4",
         "iconVariant": "add-a-place",
         "variables": {
-          "venue_name_variable": {
+          "name_variable": {
             "name": "name",
             "type": "text"
           },
@@ -1830,6 +1812,10 @@
           },
           "venue_layout_variable": {
             "name": "Layout",
+            "type": "layout"
+          },
+          "venue_layout_variable_manual": {
+            "name": "Layout_Manual",
             "type": "layout"
           }
         }
